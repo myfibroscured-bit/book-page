@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>From Fibromyalgia to Freedom – Founding Digital Edition</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --teal: #00afb9;
+            --mauve: #967da9;
+            --gold: #b8a06f;
+            --dark: #1f1f1f;
+            --light: #f9f9fb;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            color: var(--dark);
+            background: var(--light);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            line-height: 1.25;
+        }
+
+        a { text-decoration: none; }
+
+        /* Header */
+        header {
+            background: white;
+            padding: 16px 24px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #eee;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .logo img {
+            height: 48px;
+        }
+
+        .menu-toggle {
+            font-size: 28px;
+            cursor: pointer;
+            display: none;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 24px;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav a {
+            color: var(--dark);
+            font-weight: 500;
+        }
+
+        /* Mobile Menu */
+        @media (max-width: 768px) {
+            .menu-toggle { display: block; }
+            nav ul {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 75%;
+                height: 100%;
+                background: white;
+                flex-direction: column;
+                padding: 80px 24px;
+                gap: 16px;
+                transition: right 0.3s ease;
+            }
+            nav ul.open { right: 0; }
+        }
+
+        /* Hero */
+        .hero {
+            max-width: 1200px;
+            margin: auto;
+            padding: 80px 24px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+        }
+
+        .cta {
+            display: inline-block;
+            margin-top: 24px;
+            background: var(--gold);
+            color: white;
+            padding: 14px 28px;
+            border-radius: 40px;
+            font-weight: 600;
+        }
+
+        .hero img {
+            max-width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            .hero { grid-template-columns: 1fr; text-align: center; }
+        }
+
+        /* Sections */
+        section {
+            max-width: 1000px;
+            margin: auto;
+            padding: 80px 24px;
+        }
+
+        section.alt {
+            background: #ffffff;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 32px;
+        }
+
+        /* Footer */
+        footer {
+            background: #f1f1f5;
+            padding: 40px 24px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="nav">
+        <div class="logo">
+            <img src="/images/logo.png" alt="Lindsey Hawkins Logo">
+        </div>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <nav>
+            <ul id="menu">
+                <li><a href="#about">About</a></li>
+                <li><a href="#book">The Book</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#buy">Buy</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+
+<section class="hero" id="about">
+    <div>
+        <h1>Gain the Life Beyond Fibromyalgia You Deserve</h1>
+        <p><strong>Using the exact tools I used to go from housebound on 60+ pills a day to full freedom.</strong></p>
+        <p>Real strategies, tools, and lessons drawn from lived experience — not theory.</p>
+        <a class="cta" href="#buy">Get the Founding Digital Edition</a>
+    </div>
+    <div>
+        <img src="/images/book-cover.png" alt="From Fibromyalgia to Freedom Book Cover">
+    </div>
+</section>
+
+<section id="book" class="alt">
+    <h2>From Fibromyalgia to Freedom</h2>
+    <p>This is the founding digital edition of <em>From Fibromyalgia to Freedom</em>, released in early access prior to physical publication.</p>
+    <p>After more than a decade living with fibromyalgia, I healed my body and reclaimed my life. This book shares the hard‑won lessons, mindset shifts, and practical tools that supported that transformation.</p>
+</section>
+
+<section>
+    <div class="features">
+        <div>
+            <h3>Break Free from Survival Mode</h3>
+            <p>Reduce pain, fatigue, and brain fog using grounded strategies that work in real life.</p>
+        </div>
+        <div>
+            <h3>Reclaim Energy & Clarity</h3>
+            <p>Wake up with more focus and vitality so you can enjoy the life you’ve been missing.</p>
+        </div>
+        <div>
+            <h3>Build Lasting Momentum</h3>
+            <p>Create changes that last through mindset, nutrition, and lifestyle shifts.</p>
+        </div>
+        <div>
+            <h3>Step into True Freedom</h3>
+            <p>Stop merely coping and start living with a clear roadmap forward.</p>
+        </div>
+    </div>
+</section>
+
+<section id="testimonials" class="alt">
+    <h2>Testimonials</h2>
+    <p>Reader and client testimonials will be added here as they come in.</p>
+</section>
+
+<section id="buy">
+    <h2>Founding Digital Edition (PDF)</h2>
+    <p>Immediate access to the early‑access digital PDF. No physical product will be shipped.</p>
+    <a class="cta" href="https://buy.stripe.com/5kQ7sL0VQfCc3tk4r94ZG00" target="_blank">Get the Founding Digital Edition</a>
+</section>
+
+</main>
+
+<footer>
+    <p>© Lindsey Hawkins. All rights reserved.</p>
+    <p>This digital product is protected by copyright. Purchase grants access for personal use only. Redistribution, sharing, or resale is strictly prohibited.</p>
+</footer>
+
+<script>
+    function toggleMenu() {
+        document.getElementById('menu').classList.toggle('open');
+    }
+</script>
+
+</body>
+</html>
