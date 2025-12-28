@@ -57,9 +57,7 @@
             margin: auto;
         }
 
-        .logo img {
-            height: 48px;
-        }
+        .logo img { height: 48px; }
 
         .menu-toggle {
             font-size: 28px;
@@ -109,8 +107,8 @@
         }
 
         .hero h1 { font-size: 3rem; }
-
         .hero p { font-size: 1.1rem; }
+        .hero img { max-width: 100%; }
 
         .cta {
             display: inline-block;
@@ -121,8 +119,6 @@
             border-radius: 40px;
             font-weight: 600;
         }
-
-        .hero img { max-width: 100%; }
 
         @media (max-width: 768px) {
             .hero {
@@ -138,29 +134,41 @@
             padding: 80px 24px;
         }
 
-        section.alt {
-            background: white;
-        }
+        section.alt { background: white; }
 
         /* Early Access */
         .early-access {
-            background: #ffffff;
+            background: white;
             border-top: 1px solid #eee;
             border-bottom: 1px solid #eee;
         }
 
-        .early-access ul {
-            padding-left: 20px;
-        }
+        .early-access ul { padding-left: 20px; }
+        .early-access li { margin-bottom: 10px; }
 
-        .early-access li {
-            margin-bottom: 10px;
-        }
-
+        /* Features – Balanced 4 Column Layout */
         .features {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            grid-template-columns: repeat(4, 1fr);
             gap: 32px;
+            text-align: center;
+        }
+
+        @media (max-width: 1024px) {
+            .features {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .features {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Hide Testimonials Until Ready */
+        #testimonials {
+            display: none;
         }
 
         footer {
@@ -170,7 +178,6 @@
             font-size: 0.9rem;
         }
     </style>
-
 </head>
 
 <!-- Google Analytics -->
@@ -195,7 +202,6 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#early">Early Access</a></li>
                 <li><a href="#book">The Book</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
                 <li><a href="#buy">Buy</a></li>
             </ul>
         </nav>
@@ -204,7 +210,6 @@
 
 <main>
 
-<!-- HERO -->
 <section class="hero" id="about">
     <div>
         <h1>Gain the Life Beyond Fibromyalgia You Deserve</h1>
@@ -217,7 +222,6 @@
     </div>
 </section>
 
-<!-- EARLY ACCESS -->
 <section class="early-access" id="early">
     <h2>Early Access to a Book Born from Healing</h2>
 
@@ -225,12 +229,11 @@
 
     <p>After more than a decade living with fibromyalgia — and finding my way back to health, clarity, and inner authority — I wrote the book I wish I’d had when everything felt overwhelming, confusing, and invisible.</p>
 
-    <p>Before it’s released publicly, I’m opening a small <strong>Founding Reader Circle</strong>.</p>
-
     <h3>What you’ll receive</h3>
     <ul>
-        <li>Early access to the full book (PDF)</li>
+        <li>Early access to the full book (PDF + EPUB)</li>
         <li>First-edition reader experience</li>
+        <li>Optional reflection prompts</li>
         <li>Opportunity to share feedback</li>
         <li>Possible testimonial inclusion (with consent)</li>
     </ul>
@@ -238,7 +241,6 @@
     <p><em>Nothing is required. Your presence alone is enough.</em></p>
 </section>
 
-<!-- BOOK -->
 <section id="book" class="alt">
     <h2>From Fibromyalgia to Freedom</h2>
     <p>This is the founding digital edition released prior to physical publication.</p>
@@ -266,14 +268,9 @@
     </div>
 </section>
 
-<section id="testimonials" class="alt">
-    <h2>Testimonials</h2>
-    <p>Founding reader testimonials will be added here.</p>
-</section>
-
 <section id="buy">
     <h2>Founding Digital Edition (PDF)</h2>
-    <p>Immediate digital access. No physical product shipped.</p>
+    <p>Immediate digital access. No physical product will be shipped.</p>
     <a class="cta" href="https://buy.stripe.com/5kQ7sL0VQfCc3tk4r94ZG00" target="_blank">Get the Founding Digital Edition</a>
 </section>
 
@@ -292,3 +289,4 @@ function toggleMenu() {
 
 </body>
 </html>
+
