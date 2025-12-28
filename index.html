@@ -29,7 +29,7 @@
             font-family: 'Inter', sans-serif;
             color: var(--dark);
             background: var(--light);
-            line-height: 1.6;
+            line-height: 1.7;
         }
 
         h1, h2, h3 {
@@ -80,7 +80,6 @@
             font-weight: 500;
         }
 
-        /* Mobile Menu */
         @media (max-width: 768px) {
             .menu-toggle { display: block; }
             nav ul {
@@ -109,13 +108,9 @@
             align-items: center;
         }
 
-        .hero h1 {
-            font-size: 3rem;
-        }
+        .hero h1 { font-size: 3rem; }
 
-        .hero p {
-            font-size: 1.1rem;
-        }
+        .hero p { font-size: 1.1rem; }
 
         .cta {
             display: inline-block;
@@ -127,12 +122,13 @@
             font-weight: 600;
         }
 
-        .hero img {
-            max-width: 100%;
-        }
+        .hero img { max-width: 100%; }
 
         @media (max-width: 768px) {
-            .hero { grid-template-columns: 1fr; text-align: center; }
+            .hero {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
         }
 
         /* Sections */
@@ -143,7 +139,22 @@
         }
 
         section.alt {
+            background: white;
+        }
+
+        /* Early Access */
+        .early-access {
             background: #ffffff;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+        }
+
+        .early-access ul {
+            padding-left: 20px;
+        }
+
+        .early-access li {
+            margin-bottom: 10px;
         }
 
         .features {
@@ -152,7 +163,6 @@
             gap: 32px;
         }
 
-        /* Footer */
         footer {
             background: #f1f1f5;
             padding: 40px 24px;
@@ -161,15 +171,16 @@
         }
     </style>
 </head>
-    <!-- Google tag (gtag.js) -->
+
+<!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-K342PBL4RV"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-K342PBL4RV');
 </script>
+
 <body>
 
 <header>
@@ -181,6 +192,7 @@
         <nav>
             <ul id="menu">
                 <li><a href="#about">About</a></li>
+                <li><a href="#early">Early Access</a></li>
                 <li><a href="#book">The Book</a></li>
                 <li><a href="#testimonials">Testimonials</a></li>
                 <li><a href="#buy">Buy</a></li>
@@ -191,6 +203,7 @@
 
 <main>
 
+<!-- HERO -->
 <section class="hero" id="about">
     <div>
         <h1>Gain the Life Beyond Fibromyalgia You Deserve</h1>
@@ -198,122 +211,69 @@
         <p>Real strategies, tools, and lessons drawn from lived experience — not theory.</p>
         <a class="cta" href="https://buy.stripe.com/5kQ7sL0VQfCc3tk4r94ZG00" target="_blank">Get the Founding Digital Edition</a>
     </div>
-    
     <div>
         <img src="book-cover.png" alt="From Fibromyalgia to Freedom Book Cover">
     </div>
+</section>
 
-    <section class="early-access">
-  <div class="container">
-
+<!-- EARLY ACCESS -->
+<section class="early-access" id="early">
     <h2>Early Access to a Book Born from Healing</h2>
 
-    <p><strong>This book wasn’t written to inform you.<br>
-    It was written to walk with you.</strong></p>
+    <p><strong>This book wasn’t written to inform you.<br>It was written to walk with you.</strong></p>
 
-    <p>
-      After more than a decade living with fibromyalgia — and finding my way back to health,
-      clarity, and inner authority — I wrote the book I wish I’d had when everything felt
-      overwhelming, confusing, and invisible.
-    </p>
+    <p>After more than a decade living with fibromyalgia — and finding my way back to health, clarity, and inner authority — I wrote the book I wish I’d had when everything felt overwhelming, confusing, and invisible.</p>
 
-    <p>
-      Before it’s released publicly, I’m opening a small <strong>Founding Reader Circle</strong>.
-    </p>
-
-    <p>
-      This is an invitation to read the book early, in digital form, and to be part of its final becoming.
-    </p>
+    <p>Before it’s released publicly, I’m opening a small <strong>Founding Reader Circle</strong>.</p>
 
     <h3>What you’ll receive</h3>
     <ul>
-      <li>✔ Early access to the full book (PDF + EPUB)</li>
-      <li>✔ A first-edition reader experience before public release</li>
-      <li>✔ Optional reflection prompts to deepen integration</li>
-      <li>✔ The opportunity to share feedback or reflections</li>
-      <li>✔ The option to be considered for inclusion as a testimonial or acknowledgment in future editions</li>
+        <li>Early access to the full book (PDF + EPUB)</li>
+        <li>First-edition reader experience</li>
+        <li>Optional reflection prompts</li>
+        <li>Opportunity to share feedback</li>
+        <li>Possible testimonial inclusion (with consent)</li>
     </ul>
 
-    <p><em>Nothing is required.<br>Your presence alone is enough.</em></p>
-
-    <h3>Who this is for</h3>
-    <p>This early access is for you if:</p>
-
-    <ul>
-      <li>You’ve lived with chronic pain, fatigue, or unexplained symptoms</li>
-      <li>You sense your body has been communicating something deeper</li>
-      <li>You’re open to a mindset-led, nervous-system-aware, self-led healing path</li>
-      <li>You value lived experience over surface-level fixes</li>
-      <li>You feel drawn to walk alongside a book as it finds its voice in the world</li>
-    </ul>
-
-    <h3>A note on testimonials</h3>
-    <p>
-      Some founding readers choose to share a short reflection or testimonial after reading.
-    </p>
-
-    <p>
-      If you feel genuinely moved to do so, your words may be included (with your permission)
-      on the book’s cover, inner pages, or website.
-    </p>
-
-    <p>
-      There is no obligation, no expectation, and no editing without consent.
-      <br><strong>This is about authenticity, not promotion.</strong>
-    </p>
-
-    <h3>Why join now</h3>
-    <ul>
-      <li>The public release will come later</li>
-      <li>The price will increase</li>
-      <li>Physical copies will be sold separately</li>
-    </ul>
-
-    <p>
-      Founding readers receive early access, direct connection, and the quiet knowing
-      that they helped bring this book into the world.
-    </p>
-
-  </div>
+    <p><em>Nothing is required. Your presence alone is enough.</em></p>
 </section>
 
-</section>
-
+<!-- BOOK -->
 <section id="book" class="alt">
     <h2>From Fibromyalgia to Freedom</h2>
-    <p>This is the founding digital edition of <em>From Fibromyalgia to Freedom</em>, released in early access prior to physical publication.</p>
-    <p>After more than a decade living with fibromyalgia, I healed my body and reclaimed my life. This book shares the hard‑won lessons, mindset shifts, and practical tools that supported that transformation.</p>
+    <p>This is the founding digital edition released prior to physical publication.</p>
+    <p>It shares the hard-won lessons, mindset shifts, and practical tools that supported my recovery.</p>
 </section>
 
 <section>
     <div class="features">
         <div>
             <h3>Break Free from Survival Mode</h3>
-            <p>Reduce pain, fatigue, and brain fog using grounded strategies that work in real life.</p>
+            <p>Reduce pain, fatigue, and brain fog with grounded strategies.</p>
         </div>
         <div>
             <h3>Reclaim Energy & Clarity</h3>
-            <p>Wake up with more focus and vitality so you can enjoy the life you’ve been missing.</p>
+            <p>Wake up with focus and vitality.</p>
         </div>
         <div>
             <h3>Build Lasting Momentum</h3>
-            <p>Create changes that last through mindset, nutrition, and lifestyle shifts.</p>
+            <p>Create sustainable change.</p>
         </div>
         <div>
             <h3>Step into True Freedom</h3>
-            <p>Stop merely coping and start living with a clear roadmap forward.</p>
+            <p>Move beyond coping into living.</p>
         </div>
     </div>
 </section>
 
 <section id="testimonials" class="alt">
     <h2>Testimonials</h2>
-    <p>Reader and client testimonials will be added here as they come in.</p>
+    <p>Founding reader testimonials will be added here.</p>
 </section>
 
 <section id="buy">
     <h2>Founding Digital Edition (PDF)</h2>
-    <p>Immediate access to the early‑access digital PDF. No physical product will be shipped.</p>
+    <p>Immediate digital access. No physical product shipped.</p>
     <a class="cta" href="https://buy.stripe.com/5kQ7sL0VQfCc3tk4r94ZG00" target="_blank">Get the Founding Digital Edition</a>
 </section>
 
@@ -321,13 +281,13 @@
 
 <footer>
     <p>© Lindsey Hawkins. All rights reserved.</p>
-    <p>This digital product is protected by copyright. Purchase grants access for personal use only. Redistribution, sharing, or resale is strictly prohibited.</p>
+    <p>This digital product is protected by copyright. Personal use only. Redistribution prohibited.</p>
 </footer>
 
 <script>
-    function toggleMenu() {
-        document.getElementById('menu').classList.toggle('open');
-    }
+function toggleMenu() {
+    document.getElementById('menu').classList.toggle('open');
+}
 </script>
 
 </body>
