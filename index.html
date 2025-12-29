@@ -160,3 +160,137 @@
         }
 
         @media (max-width: 1024px) {
+            .features {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .features {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        footer {
+            background: #f1f1f5;
+            padding: 40px 24px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-K342PBL4RV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-K342PBL4RV');
+</script>
+
+<body>
+
+<a id="top"></a>
+
+<header>
+    <div class="nav">
+        <div class="logo">
+            <a href="#top">
+                <img src="logo.png" alt="Lindsey Hawkins Logo">
+            </a>
+        </div>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <nav>
+            <ul id="menu">
+                <li><a href="#about">About</a></li>
+                <li><a href="#early">Early Access</a></li>
+                <li><a href="#book">The Book</a></li>
+                <li><a href="#buy">Buy</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+
+<section class="hero" id="about">
+    <div>
+        <h1>Gain the Life Beyond Fibromyalgia You Deserve</h1>
+        <p><strong>Using the exact tools I used to go from housebound on 60+ pills a day to full freedom.</strong></p>
+        <p>Real strategies, tools, and lessons drawn from lived experience — not theory.</p>
+        <a class="cta" href="https://buy.stripe.com/5kQ7sL0VQfCc3tk4r94ZG00" target="_blank">Get the Founding Digital Edition</a>
+    </div>
+    <div>
+        <img src="book-cover.png" alt="From Fibromyalgia to Freedom Book Cover">
+    </div>
+</section>
+
+<section class="early-access" id="early">
+    <h2>Early Access to a Book Born from Healing</h2>
+    <p><strong>This book wasn’t written to inform you.<br>It was written to walk with you.</strong></p>
+    <p>After more than a decade living with fibromyalgia — and finding my way back to health, clarity, and inner authority — I wrote the book I wish I’d had when everything felt overwhelming, confusing, and invisible.</p>
+
+    <h3>What you’ll receive</h3>
+    <ul>
+        <li>Early access to the full book (PDF)</li>
+        <li>First-edition reader experience</li>
+        <li>Opportunity to share feedback</li>
+        <li>Possible testimonial inclusion (with consent)</li>
+    </ul>
+
+    <p><em>Nothing is required. Your presence alone is enough.</em></p>
+</section>
+
+<section id="book" class="alt">
+    <h2>From Fibromyalgia to Freedom</h2>
+    <p>This is the founding digital edition released prior to physical publication.</p>
+    <p>It shares the hard-won lessons, mindset shifts, and practical tools that supported my recovery.</p>
+</section>
+
+<section>
+    <div class="features">
+        <div>
+            <h3>Break Free from Survival Mode</h3>
+            <p>Reduce pain, fatigue, and brain fog with grounded strategies.</p>
+        </div>
+        <div>
+            <h3>Reclaim Energy & Clarity</h3>
+            <p>Wake up with focus and vitality.</p>
+        </div>
+        <div>
+            <h3>Build Lasting Momentum</h3>
+            <p>Create sustainable change.</p>
+        </div>
+        <div>
+            <h3>Step into True Freedom</h3>
+            <p>Move beyond coping into living.</p>
+        </div>
+    </div>
+</section>
+
+<section id="buy">
+    <h2>Founding Digital Edition (PDF)</h2>
+    <p>Immediate digital access. No physical product will be shipped.</p>
+    <a class="cta" href="https://buy.stripe.com/5kQ7sL0VQfCc3tk4r94ZG00" target="_blank">Get the Founding Digital Edition</a>
+</section>
+
+</main>
+
+<footer>
+    <p>© Lindsey Hawkins. All rights reserved.</p>
+    <p>This digital product is protected by copyright. Personal use only. Redistribution prohibited.</p>
+</footer>
+
+<script>
+function toggleMenu() {
+    document.getElementById('menu').classList.toggle('open');
+}
+
+window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+};
+</script>
+
+</body>
+</html>
