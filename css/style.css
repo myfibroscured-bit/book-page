@@ -230,13 +230,14 @@ a:hover { color: #008a92; }
 
 /* Hero Slide 1 — portrait left, text balanced in remaining space */
 .carousel .carousel-inner .carousel-item .carousel-caption-1.carousel-caption-photo {
-    justify-content: center;
+    justify-content: flex-start;
     background: none;
 }
 .carousel-caption-photo .carousel-caption-1-content {
     text-align: left;
     padding-left: 34%;
     padding-right: 6%;
+    box-sizing: content-box;
 }
 
 @media (max-width:992px) {
