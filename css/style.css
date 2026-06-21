@@ -240,7 +240,7 @@ a:hover { color: #008a92; }
     box-sizing: content-box;
 }
 .carousel-caption-photo .carousel-caption-1-content h1 {
-    font-size: 3rem;
+    font-size: clamp(2.6rem, 3.3vw, 4.2rem);
     line-height: 1.15;
 }
 .carousel-caption-photo .carousel-caption-1-content .d-flex {
