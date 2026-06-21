@@ -247,6 +247,25 @@ a:hover { color: #008a92; }
     justify-content: flex-end;
 }
 
+/* Hero Slide 2 — book cover right, text balanced in remaining space (mirror of slide 1) */
+.carousel .carousel-inner .carousel-item .carousel-caption-2.carousel-caption-book {
+    justify-content: flex-start;
+    background: none;
+}
+.carousel-caption-book .carousel-caption-2-content {
+    text-align: left;
+    padding-left: 5%;
+    padding-right: 36%;
+    box-sizing: content-box;
+}
+.carousel-caption-book .carousel-caption-2-content h1 {
+    font-size: clamp(2.6rem, 3.3vw, 4.2rem);
+    line-height: 1.15;
+}
+.carousel-caption-book .carousel-caption-2-content .d-flex {
+    justify-content: flex-start;
+}
+
 @media (max-width:992px) {
     .carousel .carousel-inner .carousel-item { height:700px; margin-top:0; }
     .carousel .carousel-inner .carousel-item img { height:700px; object-fit:cover; }
@@ -433,6 +452,14 @@ a:hover { color: #008a92; }
     background-image: url('../img/hero-slide1-bg-v2.jpg');
     background-size: cover;
     background-position: left center;
+    background-repeat: no-repeat;
+}
+
+/* Hero Slide 2 — book cover composited on right, gradient field on left */
+.hero-placeholder-book {
+    background-image: url('../img/hero-slide2-bg.jpg');
+    background-size: cover;
+    background-position: right center;
     background-repeat: no-repeat;
 }
 
