@@ -234,10 +234,13 @@ a:hover { color: #008a92; }
     background: none;
 }
 .carousel-caption-photo .carousel-caption-1-content {
-    text-align: left;
-    padding-left: 34%;
+    text-align: right;
+    padding-left: 38%;
     padding-right: 6%;
     box-sizing: content-box;
+}
+.carousel-caption-photo .carousel-caption-1-content .d-flex {
+    justify-content: flex-end;
 }
 
 @media (max-width:992px) {
@@ -423,7 +426,7 @@ a:hover { color: #008a92; }
 
 /* Hero Slide 1 — composited portrait/gold-bar/gradient background */
 .hero-placeholder-photo {
-    background-image: url('../img/hero-slide1-bg.jpg');
+    background-image: url('../img/hero-slide1-bg-v2.jpg');
     background-size: cover;
     background-position: left center;
     background-repeat: no-repeat;
