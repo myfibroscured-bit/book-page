@@ -235,9 +235,13 @@ a:hover { color: #008a92; }
 }
 .carousel-caption-photo .carousel-caption-1-content {
     text-align: right;
-    padding-left: 38%;
-    padding-right: 6%;
+    padding-left: 36%;
+    padding-right: 5%;
     box-sizing: content-box;
+}
+.carousel-caption-photo .carousel-caption-1-content h1 {
+    font-size: 3rem;
+    line-height: 1.15;
 }
 .carousel-caption-photo .carousel-caption-1-content .d-flex {
     justify-content: flex-end;
