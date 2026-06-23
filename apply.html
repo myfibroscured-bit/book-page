@@ -67,7 +67,7 @@
 <!-- Page Header -->
 <div class="container-fluid bg-breadcrumb-mfc mb-0">
   <div class="container text-center py-4">
-    <h1 class="display-4 text-white mb-3 wow fadeInDown" data-wow-delay="0.1s">Apply to Work With Me</h1>
+    <h1 class="display-4 text-white mb-3 wow fadeInDown" data-wow-delay="0.1s">Apply to Work With Lindsey</h1>
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
         <li class="breadcrumb-item"><a href="index.html">Home</a></li>
@@ -83,9 +83,9 @@
   <div class="container py-4">
     <div class="row justify-content-center">
       <div class="col-12 col-lg-7 text-center wow fadeInUp" data-wow-delay="0.1s">
-        <h4 class="text-primary text-uppercase mb-3">The 12-Week Experience</h4>
-        <h2 class="display-4 mb-4">Let's see if this is the right fit</h2>
-        <p class="fs-5 text-body mb-0">This isn't an instant checkout — I read every application myself. Answer a few honest questions below, and I'll personally follow up to talk it through with you. Takes about 3 minutes.</p>
+        <h4 class="text-primary text-uppercase mb-3">From Fibromyalgia to Freedom</h4>
+        <h2 class="display-4 mb-4">Apply to Work With Lindsey</h2>
+        <p class="fs-5 text-body mb-0">12-Week Coaching Experience — this isn't an instant checkout, I read every application myself. Answer the questions below honestly, and I'll personally follow up to talk it through with you. Takes about 5 minutes.</p>
       </div>
     </div>
   </div>
@@ -95,7 +95,7 @@
 <div class="container-fluid pb-5">
   <div class="container">
     <div class="row justify-content-center">
-      <div class="col-12 col-lg-7 wow fadeInUp" data-wow-delay="0.15s">
+      <div class="col-12 col-lg-8 wow fadeInUp" data-wow-delay="0.15s">
 
         <div class="p-4 p-md-5 rounded-2xl shadow-soft bg-white">
 
@@ -114,29 +114,190 @@
 
           <form id="applyForm" action="https://formspree.io/f/xlgyddpr" method="POST">
 
+            <!-- SECTION 1: ABOUT YOU -->
+            <h5 class="text-uppercase fw-bold text-primary mb-4">About You</h5>
+
             <div class="mb-4">
-              <label for="applyName" class="form-label fw-bold">Your name</label>
-              <input type="text" class="form-control" id="applyName" name="name" required>
+              <label for="applyName" class="form-label fw-bold">Full name</label>
+              <input type="text" class="form-control" id="applyName" name="full_name" required>
             </div>
 
             <div class="mb-4">
-              <label for="applyEmail" class="form-label fw-bold">Your email</label>
+              <label for="applyEmail" class="form-label fw-bold">Email address</label>
               <input type="email" class="form-control" id="applyEmail" name="email" required>
             </div>
 
             <div class="mb-4">
-              <label for="applyWhere" class="form-label fw-bold">Where are you at with fibro right now?</label>
-              <textarea class="form-control" id="applyWhere" name="where_at" rows="3" required placeholder="e.g. how long you've had it, how it's affecting your day-to-day"></textarea>
+              <label for="applyCountry" class="form-label fw-bold">Where are you based? (country)</label>
+              <input type="text" class="form-control" id="applyCountry" name="country" required>
             </div>
 
             <div class="mb-4">
-              <label for="applyStopping" class="form-label fw-bold">What's stopping you from healing right now?</label>
-              <textarea class="form-control" id="applyStopping" name="whats_stopping_you" rows="3" required></textarea>
+              <label for="applyFoundVia" class="form-label fw-bold">How did you find me?</label>
+              <select class="form-select" id="applyFoundVia" name="found_via" required>
+                <option value="" disabled selected>Select one</option>
+                <option>TikTok</option>
+                <option>YouTube</option>
+                <option>Facebook</option>
+                <option>Instagram</option>
+                <option>Book</option>
+                <option>A friend</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <hr class="my-5">
+
+            <!-- SECTION 2: YOUR FIBROMYALGIA JOURNEY -->
+            <h5 class="text-uppercase fw-bold text-primary mb-4">Your Fibromyalgia Journey</h5>
+
+            <div class="mb-4">
+              <label for="applyDuration" class="form-label fw-bold">How long have you been living with fibromyalgia or chronic pain?</label>
+              <select class="form-select" id="applyDuration" name="duration_with_fibro" required>
+                <option value="" disabled selected>Select one</option>
+                <option>Under 1 year</option>
+                <option>1&ndash;3 years</option>
+                <option>3&ndash;7 years</option>
+                <option>7+ years</option>
+              </select>
             </div>
 
             <div class="mb-4">
-              <label for="applyWhyNow" class="form-label fw-bold">Why now?</label>
-              <textarea class="form-control" id="applyWhyNow" name="why_now" rows="3" required placeholder="What's making you ready to commit to this today?"></textarea>
+              <label for="applyTypicalDay" class="form-label fw-bold">In a few sentences, describe where you are right now — what does a typical day look like for you?</label>
+              <textarea class="form-control" id="applyTypicalDay" name="typical_day" rows="3" required></textarea>
+            </div>
+
+            <div class="mb-4">
+              <label class="form-label fw-bold d-block">What have you already tried? <span class="fw-normal">(tick all that apply)</span></label>
+              <div class="row">
+                <div class="col-6 col-md-4 mb-2">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="tried_already[]" id="triedMedication" value="Medication">
+                    <label class="form-check-label" for="triedMedication">Medication</label>
+                  </div>
+                </div>
+                <div class="col-6 col-md-4 mb-2">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="tried_already[]" id="triedPhysio" value="Physiotherapy">
+                    <label class="form-check-label" for="triedPhysio">Physiotherapy</label>
+                  </div>
+                </div>
+                <div class="col-6 col-md-4 mb-2">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="tried_already[]" id="triedDiet" value="Diet changes">
+                    <label class="form-check-label" for="triedDiet">Diet changes</label>
+                  </div>
+                </div>
+                <div class="col-6 col-md-4 mb-2">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="tried_already[]" id="triedMindset" value="Mindset or emotional work">
+                    <label class="form-check-label" for="triedMindset">Mindset or emotional work</label>
+                  </div>
+                </div>
+                <div class="col-6 col-md-4 mb-2">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="tried_already[]" id="triedOtherCoaching" value="Other coaching or programmes">
+                    <label class="form-check-label" for="triedOtherCoaching">Other coaching or programmes</label>
+                  </div>
+                </div>
+                <div class="col-6 col-md-4 mb-2">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="tried_already[]" id="triedNothing" value="Nothing yet">
+                    <label class="form-check-label" for="triedNothing">Nothing yet</label>
+                  </div>
+                </div>
+                <div class="col-6 col-md-4 mb-2">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="tried_already[]" id="triedOther" value="Other">
+                    <label class="form-check-label" for="triedOther">Other</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-4">
+              <label class="form-label fw-bold d-block">On a scale of 1&ndash;10, how ready are you to commit to real, lasting change — not just symptom management?</label>
+              <div class="d-flex justify-content-between small text-body mb-2">
+                <span>Not ready yet</span>
+                <span>100% ready</span>
+              </div>
+              <div class="d-flex flex-wrap gap-2">
+                <input type="radio" class="btn-check" name="readiness_scale" id="scale1" value="1" required autocomplete="off">
+                <label class="btn btn-outline-dr rounded-circle d-flex align-items-center justify-content-center p-0" style="width:42px;height:42px;" for="scale1">1</label>
+
+                <input type="radio" class="btn-check" name="readiness_scale" id="scale2" value="2" autocomplete="off">
+                <label class="btn btn-outline-dr rounded-circle d-flex align-items-center justify-content-center p-0" style="width:42px;height:42px;" for="scale2">2</label>
+
+                <input type="radio" class="btn-check" name="readiness_scale" id="scale3" value="3" autocomplete="off">
+                <label class="btn btn-outline-dr rounded-circle d-flex align-items-center justify-content-center p-0" style="width:42px;height:42px;" for="scale3">3</label>
+
+                <input type="radio" class="btn-check" name="readiness_scale" id="scale4" value="4" autocomplete="off">
+                <label class="btn btn-outline-dr rounded-circle d-flex align-items-center justify-content-center p-0" style="width:42px;height:42px;" for="scale4">4</label>
+
+                <input type="radio" class="btn-check" name="readiness_scale" id="scale5" value="5" autocomplete="off">
+                <label class="btn btn-outline-dr rounded-circle d-flex align-items-center justify-content-center p-0" style="width:42px;height:42px;" for="scale5">5</label>
+
+                <input type="radio" class="btn-check" name="readiness_scale" id="scale6" value="6" autocomplete="off">
+                <label class="btn btn-outline-dr rounded-circle d-flex align-items-center justify-content-center p-0" style="width:42px;height:42px;" for="scale6">6</label>
+
+                <input type="radio" class="btn-check" name="readiness_scale" id="scale7" value="7" autocomplete="off">
+                <label class="btn btn-outline-dr rounded-circle d-flex align-items-center justify-content-center p-0" style="width:42px;height:42px;" for="scale7">7</label>
+
+                <input type="radio" class="btn-check" name="readiness_scale" id="scale8" value="8" autocomplete="off">
+                <label class="btn btn-outline-dr rounded-circle d-flex align-items-center justify-content-center p-0" style="width:42px;height:42px;" for="scale8">8</label>
+
+                <input type="radio" class="btn-check" name="readiness_scale" id="scale9" value="9" autocomplete="off">
+                <label class="btn btn-outline-dr rounded-circle d-flex align-items-center justify-content-center p-0" style="width:42px;height:42px;" for="scale9">9</label>
+
+                <input type="radio" class="btn-check" name="readiness_scale" id="scale10" value="10" autocomplete="off">
+                <label class="btn btn-outline-dr rounded-circle d-flex align-items-center justify-content-center p-0" style="width:42px;height:42px;" for="scale10">10</label>
+              </div>
+            </div>
+
+            <hr class="my-5">
+
+            <!-- SECTION 3: WHAT YOU WANT -->
+            <h5 class="text-uppercase fw-bold text-primary mb-4">What You Want</h5>
+
+            <div class="mb-4">
+              <label for="applyLifeHealed" class="form-label fw-bold">What would your life look like if you were fully healed? What would be different?</label>
+              <textarea class="form-control" id="applyLifeHealed" name="life_if_healed" rows="3" required></textarea>
+            </div>
+
+            <div class="mb-4">
+              <label for="applyBiggestObstacle" class="form-label fw-bold">What is the biggest thing standing between you and that life right now?</label>
+              <textarea class="form-control" id="applyBiggestObstacle" name="biggest_obstacle" rows="3" required></textarea>
+            </div>
+
+            <div class="mb-4">
+              <label for="applyLivedExperience" class="form-label fw-bold">What feels most important to you about working with a coach who has actually lived this?</label>
+              <textarea class="form-control" id="applyLivedExperience" name="why_lived_experience_matters" rows="3" required></textarea>
+            </div>
+
+            <hr class="my-5">
+
+            <!-- SECTION 4: COMMITMENT & FIT -->
+            <h5 class="text-uppercase fw-bold text-primary mb-4">Commitment &amp; Fit</h5>
+
+            <div class="mb-4">
+              <label class="form-label fw-bold d-block">Are you able to invest in yourself and your recovery right now?</label>
+              <div class="form-check mb-2">
+                <input class="form-check-input" type="radio" name="ready_to_invest" id="investYes" value="Yes, I'm ready" required>
+                <label class="form-check-label" for="investYes">Yes, I'm ready</label>
+              </div>
+              <div class="form-check mb-2">
+                <input class="form-check-input" type="radio" name="ready_to_invest" id="investExploring" value="Not yet, but I'm actively exploring">
+                <label class="form-check-label" for="investExploring">Not yet, but I'm actively exploring</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="ready_to_invest" id="investMore" value="I need to know more before I can decide">
+                <label class="form-check-label" for="investMore">I need to know more before I can decide</label>
+              </div>
+            </div>
+
+            <div class="mb-4">
+              <label for="applyAnythingElse" class="form-label fw-bold">Is there anything else you'd like me to know about you before we speak? <span class="fw-normal">(optional)</span></label>
+              <textarea class="form-control" id="applyAnythingElse" name="anything_else" rows="3"></textarea>
             </div>
 
             <input type="hidden" name="_subject" value="New 12-Week Experience application">
