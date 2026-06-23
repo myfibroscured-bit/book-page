@@ -85,7 +85,8 @@
       <div class="col-12 col-lg-7 text-center wow fadeInUp" data-wow-delay="0.1s">
         <h4 class="text-primary text-uppercase mb-3">From Fibromyalgia to Freedom</h4>
         <h2 class="display-4 mb-4">Apply to Work With Lindsey</h2>
-        <p class="fs-5 text-body mb-0">12-Week Coaching Experience — this isn't an instant checkout, I read every application myself. Answer the questions below honestly, and I'll personally follow up to talk it through with you. Takes about 5 minutes.</p>
+        <p class="fs-5 text-body mb-0">This isn't an instant checkout — I read every application myself, and I'll personally follow up to talk it through with you. There's no rush: make yourself a drink, get comfortable, and answer honestly. It usually takes around 15 minutes.</p>
+        <p class="small text-body mb-0 mt-3">Your answers are saved automatically on this device as you go, so if you need to stop partway through, just close the page and come back later to pick up where you left off. (This only works on the same device and browser — it won't carry over if you switch devices or clear your browser data.)</p>
       </div>
     </div>
   </div>
@@ -110,6 +111,11 @@
           <!-- Error message (hidden by default) -->
           <div id="applyError" class="alert mfc-notice mb-4" style="display:none;">
             Something went wrong sending your application. Please try again, or email me directly at <a href="mailto:guidance@dreamyourdesires.com">guidance@dreamyourdesires.com</a>.
+          </div>
+
+          <!-- Restored progress notice (hidden by default) -->
+          <div id="applyRestoredNotice" class="alert mfc-notice mb-4" style="display:none;">
+            Welcome back — we've restored the answers you started here. Feel free to review and carry on from where you left off.
           </div>
 
           <form id="applyForm" action="https://formspree.io/f/xlgyddpr" method="POST">
@@ -300,7 +306,7 @@
               <textarea class="form-control" id="applyAnythingElse" name="anything_else" rows="3"></textarea>
             </div>
 
-            <input type="hidden" name="_subject" value="New 12-Week Experience application">
+            <input type="hidden" name="_subject" value="New coaching application">
 
             <button type="submit" id="applySubmitBtn" class="btn btn-gold rounded-pill py-3 px-5 w-100">Submit My Application</button>
             <p class="small text-body text-center mt-3 mb-0">No payment is taken here — this is just an application. We'll talk before anything else happens.</p>
@@ -314,32 +320,95 @@
 </div>
 
 <script>
-document.getElementById('applyForm').addEventListener('submit', function (e) {
-  e.preventDefault();
-  var form = e.target;
-  var submitBtn = document.getElementById('applySubmitBtn');
-  var errorBox = document.getElementById('applyError');
-  errorBox.style.display = 'none';
-  submitBtn.disabled = true;
-  submitBtn.textContent = 'Sending...';
+(function () {
+  var STORAGE_KEY = 'mfcApplyFormProgress';
+  var form = document.getElementById('applyForm');
 
-  fetch(form.action, {
-    method: 'POST',
-    body: new FormData(form),
-    headers: { 'Accept': 'application/json' }
-  }).then(function (response) {
-    if (response.ok) {
-      form.style.display = 'none';
-      document.getElementById('applySuccess').style.display = 'block';
-    } else {
-      throw new Error('Form submission failed');
+  function saveProgress() {
+    var data = {};
+    var elements = form.querySelectorAll('input, select, textarea');
+    elements.forEach(function (el) {
+      if (!el.name || el.type === 'hidden' || el.type === 'submit') return;
+      if (el.type === 'checkbox') {
+        if (!data[el.name]) data[el.name] = [];
+        if (el.checked) data[el.name].push(el.value);
+      } else if (el.type === 'radio') {
+        if (el.checked) data[el.name] = el.value;
+      } else {
+        data[el.name] = el.value;
+      }
+    });
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(data)); } catch (e) {}
+  }
+
+  function restoreProgress() {
+    var raw;
+    try { raw = localStorage.getItem(STORAGE_KEY); } catch (e) { return; }
+    if (!raw) return;
+    var data;
+    try { data = JSON.parse(raw); } catch (e) { return; }
+    var restoredAny = false;
+    Object.keys(data).forEach(function (name) {
+      var value = data[name];
+      var safeName = name.replace(/"/g, '\\"');
+      if (Array.isArray(value)) {
+        var checkboxes = form.querySelectorAll('input[type="checkbox"][name="' + safeName + '"]');
+        checkboxes.forEach(function (cb) {
+          if (value.indexOf(cb.value) !== -1) { cb.checked = true; restoredAny = true; }
+        });
+      } else {
+        var radios = form.querySelectorAll('input[type="radio"][name="' + safeName + '"]');
+        if (radios.length) {
+          radios.forEach(function (r) {
+            if (r.value === value) { r.checked = true; restoredAny = true; }
+          });
+        } else if (value) {
+          var field = form.querySelector('[name="' + safeName + '"]');
+          if (field) { field.value = value; restoredAny = true; }
+        }
+      }
+    });
+    if (restoredAny) {
+      var notice = document.getElementById('applyRestoredNotice');
+      if (notice) notice.style.display = 'block';
     }
-  }).catch(function () {
-    errorBox.style.display = 'block';
-    submitBtn.disabled = false;
-    submitBtn.textContent = 'Submit My Application';
+  }
+
+  function clearProgress() {
+    try { localStorage.removeItem(STORAGE_KEY); } catch (e) {}
+  }
+
+  form.addEventListener('input', saveProgress);
+  form.addEventListener('change', saveProgress);
+  restoreProgress();
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var submitBtn = document.getElementById('applySubmitBtn');
+    var errorBox = document.getElementById('applyError');
+    errorBox.style.display = 'none';
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending...';
+
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    }).then(function (response) {
+      if (response.ok) {
+        clearProgress();
+        form.style.display = 'none';
+        document.getElementById('applySuccess').style.display = 'block';
+      } else {
+        throw new Error('Form submission failed');
+      }
+    }).catch(function () {
+      errorBox.style.display = 'block';
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Submit My Application';
+    });
   });
-});
+})();
 </script>
 
 <!-- Footer Start -->
