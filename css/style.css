@@ -560,7 +560,7 @@ a:hover { color: #008a92; }
 /* Gift of healing */
 .gift-section { background: var(--mfc-dark); position: relative; }
 .gift-section.with-bg {
-    background-image: linear-gradient(rgba(26,26,46,.82), rgba(26,26,46,.82)), url('../img/book-mockup-3.jpg');
+    background-image: linear-gradient(rgba(26,26,46,.68), rgba(26,26,46,.68)), url('../img/book-mockup-3.png');
     background-size: cover; background-position: center;
 }
 
