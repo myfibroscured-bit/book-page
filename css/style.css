@@ -493,7 +493,7 @@ a:hover { color: #008a92; }
 .book-hero { background: #ffffff; padding: 130px 0 70px; }
 @media (max-width:991.98px) { .book-hero { padding: 110px 0 50px; } }
 .book-hero .eyebrow { color: var(--mfc-gold); letter-spacing:.12em; font-size:.85rem; font-weight:700; }
-.book-hero img.hero-mockup { max-width: 380px; width:100%; height:auto; border-radius: 16px; box-shadow: 0 25px 60px rgba(0,0,0,.45); }
+.book-hero img.hero-mockup { max-width: 480px; width:100%; height:auto; border-radius: 16px; box-shadow: 0 25px 60px rgba(0,0,0,.15); }
 @media (max-width:991.98px) { .book-hero img.hero-mockup { max-width: 100%; } }
 .book-hero .secondary-link { color: rgba(26,26,46,.7); font-size:.95rem; text-decoration:underline; display:inline-block; margin-top:14px; }
 .book-hero .secondary-link:hover { color: var(--mfc-dark); }
