@@ -11,8 +11,8 @@
     --bs-secondary:      #967da9;   /* MFC Mauve */
     --bs-secondary-rgb:  150, 125, 169;
     --bs-dark:           #1a1a2e;   /* MFC Dark */
-    --bs-white:          #ffffff;
-    --bs-light:          #f8f6f4;
+    --bs-white:          #ffffff;F
+    --bs-light:          #f8f6f4;F
     --bs-body:           #4a4a5a;
     --mfc-gold:          #b8a06f;
     --mfc-teal:          #00afb9;
@@ -490,7 +490,7 @@ a:hover { color: #008a92; }
    ══════════════════════════════════════════════════════════ */
 
 /* Hero */
-.book-hero { background: #ffffff; padding: 130px 0 70px; }
+.book-hero { background: #ffffff; padding: 130px 0 70px; border-bottom: 1px solid rgba(0,175,185,.2); }
 @media (max-width:991.98px) { .book-hero { padding: 110px 0 50px; } }
 .book-hero .eyebrow { color: var(--mfc-gold); letter-spacing:.12em; font-size:.85rem; font-weight:700; }
 .book-hero img.hero-mockup { max-width: 480px; width:100%; height:auto; border-radius: 16px; box-shadow: 0 25px 60px rgba(0,0,0,.15); }
