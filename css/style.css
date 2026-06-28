@@ -585,3 +585,19 @@ a:hover { color: #008a92; }
 @media (max-width: 600px) {
   .peek-page-img { max-width: 100%; }
 }
+/* Sneak peek carousel nav arrows */
+#sneakPeekCarousel .owl-nav button {
+  background: #ffffff !important;
+  color: #1a1a2e !important;
+  width: 44px;
+  height: 44px;
+  border-radius: 50% !important;
+  font-size: 1.4rem !important;
+  line-height: 1 !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,.2);
+  margin: 0 8px;
+}
+#sneakPeekCarousel .owl-nav button:hover {
+  background: #b8a06f !important;
+  color: #ffffff !important;
+}
