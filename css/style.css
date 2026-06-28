@@ -491,7 +491,7 @@ a:hover { color: #008a92; }
    ══════════════════════════════════════════════════════════ */
 
 /* Hero */
-.book-hero { background: #f0fafb; padding: 130px 0 70px; border-bottom: 1px solid rgba(0,175,185,.2); }
+.book-hero { background: linear-gradient(to right, #d4f2f4 0%, #eafbfc 50%, #ffffff 100%); padding: 130px 0 70px; border-bottom: none; }
 @media (max-width:991.98px) { .book-hero { padding: 110px 0 50px; } }
 .book-hero .eyebrow { color: var(--mfc-gold); letter-spacing:.12em; font-size:.85rem; font-weight:700; }
 .book-hero img.hero-mockup { max-width: 480px; width:100%; height:auto; border-radius: 16px; box-shadow: 0 25px 60px rgba(0,0,0,.15); }
