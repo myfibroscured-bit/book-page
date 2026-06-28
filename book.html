@@ -201,16 +201,49 @@ src="https://www.facebook.com/tr?id=1897280790909028&ev=PageView&noscript=1"
      ════════════════════════════════════════════════════════ -->
 <div class="container-fluid py-5 mfc-band-teal" id="sneak-peek">
   <div class="container py-4 text-center text-white">
-    <h2 class="display-4 text-white mb-3">Not sure yet? Read the first chapter free</h2>
-    <p class="fs-5 mb-4" style="color:rgba(255,255,255,.9);">Enter your email below and the first chapter will open right here on the page — no download, no waiting.</p>
+    <h2 class="display-4 text-white mb-3">Want to read before you buy?</h2>
+    <p class="fs-5 mb-4" style="color:rgba(255,255,255,.9);">Enter your email and get instant access to the first 17 pages — cover, contents, introduction, and Chapter One. No download, no waiting.</p>
 
-    <!-- TODO: connect email to list — replace YOUR_FORM_ID with a real Formspree (or similar) endpoint -->
     <form id="sneakPeekForm" class="sneak-peek-box d-flex flex-column flex-sm-row gap-3" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
       <input type="email" name="email" id="sneakPeekEmail" class="form-control flex-grow-1" placeholder="Your email address" required>
       <button type="submit" class="btn btn-gold rounded-pill px-4 py-3">Read Now →</button>
     </form>
 
-    <div id="sneakPeekContent" style="display:none;">
+    <div id="sneakPeekContent" style="display:none; margin-top:2.5rem;">
+
+      <!-- Page counter -->
+      <p id="peekPageCounter" style="color:rgba(255,255,255,.8); font-size:.9rem; margin-bottom:1rem;">Page <span id="peekCurrent">1</span> of 17</p>
+
+      <!-- Carousel -->
+      <div class="owl-carousel owl-theme" id="sneakPeekCarousel">
+        <div class="peek-slide"><img src="img/sneak-peek/page-01.jpg" alt="Page 1" class="peek-page-img"></div>
+        <div class="peek-slide"><img src="img/sneak-peek/page-02.jpg" alt="Page 2" class="peek-page-img"></div>
+        <div class="peek-slide"><img src="img/sneak-peek/page-03.jpg" alt="Page 3" class="peek-page-img"></div>
+        <div class="peek-slide"><img src="img/sneak-peek/page-04.jpg" alt="Page 4" class="peek-page-img"></div>
+        <div class="peek-slide"><img src="img/sneak-peek/page-05.jpg" alt="Page 5" class="peek-page-img"></div>
+        <div class="peek-slide"><img src="img/sneak-peek/page-06.jpg" alt="Page 6" class="peek-page-img"></div>
+        <div class="peek-slide"><img src="img/sneak-peek/page-07.jpg" alt="Page 7" class="peek-page-img"></div>
+        <div class="peek-slide"><img src="img/sneak-peek/page-08.jpg" alt="Page 8" class="peek-page-img"></div>
+        <div class="peek-slide"><img src="img/sneak-peek/page-09.jpg" alt="Page 9" class="peek-page-img"></div>
+        <div class="peek-slide"><img src="img/sneak-peek/page-10.jpg" alt="Page 10" class="peek-page-img"></div>
+        <div class="peek-slide"><img src="img/sneak-peek/page-11.jpg" alt="Page 11" class="peek-page-img"></div>
+        <div class="peek-slide"><img src="img/sneak-peek/page-12.jpg" alt="Page 12" class="peek-page-img"></div>
+        <div class="peek-slide"><img src="img/sneak-peek/page-13.jpg" alt="Page 13" class="peek-page-img"></div>
+        <div class="peek-slide"><img src="img/sneak-peek/page-14.jpg" alt="Page 14" class="peek-page-img"></div>
+        <div class="peek-slide"><img src="img/sneak-peek/page-15.jpg" alt="Page 15" class="peek-page-img"></div>
+        <div class="peek-slide"><img src="img/sneak-peek/page-16.jpg" alt="Page 16" class="peek-page-img"></div>
+        <div class="peek-slide"><img src="img/sneak-peek/page-17.jpg" alt="Page 17" class="peek-page-img"></div>
+      </div>
+
+      <!-- End of preview CTA -->
+      <div class="mt-4">
+        <p style="color:rgba(255,255,255,.9); font-size:1.1rem; margin-bottom:1rem;">That's just the beginning. The full roadmap is waiting for you.</p>
+        <a href="https://buy.stripe.com/cNi3cvcEy89KbZQ8Hp4ZG01" target="_blank" rel="noopener" class="btn btn-gold rounded-pill py-3 px-5">Get Your Copy — $27</a>
+      </div>
+
+    </div>
+  </div>
+</div>
       <h3 class="mb-1">Introduction</h3>
       <h4 class="text-primary mb-4" style="font-weight:600;">From Survival to Freedom: My Fibromyalgia Journey</h4>
       <p>For ten long years, I lived under the shadow of fibromyalgia. Doctors, health professionals, all told me the same thing: there's no cure — only management.</p>
