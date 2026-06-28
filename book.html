@@ -652,15 +652,30 @@ document.addEventListener('DOMContentLoaded', function () {
     sneakForm.addEventListener('submit', function (e) {
       e.preventDefault();
       var formData = new FormData(sneakForm);
-      // TODO: connect email to list — this fires a best-effort POST to Formspree;
-      // the reveal below happens regardless so the reader never gets blocked.
       fetch(sneakForm.action, { method: 'POST', body: formData, headers: { 'Accept': 'application/json' } }).catch(function () {});
       sneakForm.style.display = 'none';
       var content = document.getElementById('sneakPeekContent');
-      if (content) { content.style.display = 'block'; }
+      if (content) {
+        content.style.display = 'block';
+        // Init carousel after reveal
+        var $carousel = $('#sneakPeekCarousel');
+        if ($carousel.length && !$carousel.hasClass('owl-loaded')) {
+          $carousel.owlCarousel({
+            items: 1,
+            loop: false,
+            nav: true,
+            dots: false,
+            navText: ['&#8592;','&#8594;'],
+            onChanged: function(e) {
+              var idx = (e.item.index || 0) + 1;
+              var counter = document.getElementById('peekCurrent');
+              if (counter) counter.textContent = idx;
+            }
+          });
+        }
+      }
     });
   }
-
   // ── Notify me (Section 9) ────────────────────────────────
   var notifyForm = document.getElementById('notifyForm');
   if (notifyForm) {
