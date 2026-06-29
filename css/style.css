@@ -528,9 +528,12 @@ a:hover { color: #008a92; }
     border-radius: 50px; border: none; padding: .85rem 1.4rem;
 }
 #sneakPeekContent {
-    background: #fff; color: var(--bs-body); border-radius: 1.25rem;
+    background: #fff; color: var(--mfc-dark); border-radius: 1.25rem;
     padding: 2.5rem; text-align:left; max-width: 760px; margin: 2.5rem auto 0;
     box-shadow: 0 10px 30px rgba(0,0,0,.12);
+}
+#sneakPeekContent p {
+    color: var(--mfc-dark) !important;
 }
 #sneakPeekContent h3, #sneakPeekContent h4 { color: var(--mfc-dark); }
 #sneakPeekContent p { line-height: 1.8; }
