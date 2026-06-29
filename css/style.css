@@ -591,7 +591,7 @@ a:hover { color: #008a92; }
   margin-top: 1.5rem;
   text-align: center;
 }
-#sneakPeekCarousel .owl-nav button {
+#sneakPeekCarousel .owl-nav div {
   background: var(--mfc-teal) !important;
   color: #ffffff !important;
   width: 48px !important;
@@ -604,22 +604,16 @@ a:hover { color: #008a92; }
   justify-content: center !important;
   box-shadow: 0 4px 12px rgba(0,0,0,.25) !important;
   margin: 0 8px !important;
-  border: none !important;
   opacity: 1 !important;
   visibility: visible !important;
+  cursor: pointer !important;
 }
-#sneakPeekCarousel .owl-nav button span {
-  color: #ffffff !important;
-  font-size: 1.5rem !important;
-  line-height: 1 !important;
-}
-#sneakPeekCarousel .owl-nav button:hover {
+#sneakPeekCarousel .owl-nav div:hover {
   background: var(--mfc-gold) !important;
   color: #ffffff !important;
 }
-#sneakPeekCarousel .owl-nav button.disabled {
+#sneakPeekCarousel .owl-nav div.disabled {
   opacity: 0.4 !important;
-  cursor: default !important;
 }
 /* Page counter text */
 #peekPageCounter {
