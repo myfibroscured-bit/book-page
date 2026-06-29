@@ -201,6 +201,7 @@ src="https://www.facebook.com/tr?id=1897280790909028&ev=PageView&noscript=1"
     <p class="fs-5 mb-4" style="color:rgba(255,255,255,.9);">Enter your email and get instant access to the first 17 pages — cover, contents, introduction, and Chapter One. No download, no waiting.</p>
 
     <form id="sneakPeekForm" class="sneak-peek-box d-flex flex-column flex-sm-row gap-3">
+      <input type="text" name="name" id="sneakPeekName" class="form-control flex-grow-1" placeholder="Your name" required>
       <input type="email" name="email" id="sneakPeekEmail" class="form-control flex-grow-1" placeholder="Your email address" required>
       <button type="submit" class="btn btn-gold rounded-pill px-4 py-3">Read Now →</button>
     </form>
@@ -240,8 +241,8 @@ src="https://www.facebook.com/tr?id=1897280790909028&ev=PageView&noscript=1"
     </div>
   </div>
 </div>
-    
-        
+
+
 <!-- ════════════════════════════════════════════════════════
      SECTION 4 — WHAT'S INSIDE
      ════════════════════════════════════════════════════════ -->
@@ -427,6 +428,7 @@ src="https://www.facebook.com/tr?id=1897280790909028&ev=PageView&noscript=1"
     <p class="fs-5 text-body mx-auto mb-4" style="max-width:650px;">Kindle, audiobook, and hardcover editions are on their way. Enter your email below and we'll let you know the moment they're available.</p>
 
     <form id="notifyForm" class="sneak-peek-box d-flex flex-column flex-sm-row gap-3 mb-5">
+      <input type="text" name="name" id="notifyName" class="form-control flex-grow-1" placeholder="Your name" required>
       <input type="email" name="email" id="notifyEmail" class="form-control flex-grow-1" placeholder="Your email address" required>
       <button type="submit" class="btn btn-primary rounded-pill px-4 py-3">Notify Me</button>
     </form>
@@ -560,12 +562,14 @@ document.addEventListener('DOMContentLoaded', function () {
   if (sneakForm) {
     sneakForm.addEventListener('submit', function (e) {
       e.preventDefault();
+      var nameInput = document.getElementById('sneakPeekName');
       var emailInput = document.getElementById('sneakPeekEmail');
+      var name = nameInput ? nameInput.value : '';
       var email = emailInput ? emailInput.value : '';
       fetch(SHEETS_ENDPOINT, {
         method: 'POST',
         headers: { 'Content-Type': 'text/plain;charset=utf-8' },
-        body: JSON.stringify({ email: email, source: 'book-sneak-peek' })
+        body: JSON.stringify({ name: name, email: email, source: 'book-sneak-peek' })
       }).catch(function () {});
       sneakForm.style.display = 'none';
       var content = document.getElementById('sneakPeekContent');
@@ -595,12 +599,14 @@ document.addEventListener('DOMContentLoaded', function () {
   if (notifyForm) {
     notifyForm.addEventListener('submit', function (e) {
       e.preventDefault();
+      var nameInput = document.getElementById('notifyName');
       var emailInput = document.getElementById('notifyEmail');
+      var name = nameInput ? nameInput.value : '';
       var email = emailInput ? emailInput.value : '';
       fetch(SHEETS_ENDPOINT, {
         method: 'POST',
         headers: { 'Content-Type': 'text/plain;charset=utf-8' },
-        body: JSON.stringify({ email: email, source: 'book-notify-formats' })
+        body: JSON.stringify({ name: name, email: email, source: 'book-notify-formats' })
       }).catch(function () {});
       notifyForm.style.display = 'none';
       var thanks = document.getElementById('notifyThanks');
