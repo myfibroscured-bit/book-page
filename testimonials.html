@@ -5,7 +5,7 @@
 <title>Testimonials | My Fibro's Cured</title>
 <link rel="icon" href="img/favicon.ico" type="image/x-icon">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
-<meta name="description" content="Real stories from readers and clients of Lindsey Hawkins — My Fibro's Cured.">
+<meta name="description" content="Real words from readers and people who've worked with Lindsey Hawkins — My Fibro's Cured.">
 <meta name="keywords" content="fibromyalgia recovery, fibromyalgia coach, heal fibromyalgia, fibromyalgia freedom, chronic pain recovery, Lindsey Hawkins">
 <meta name="author" content="Lindsey Hawkins">
 <meta name="robots" content="index,follow">
@@ -20,161 +20,169 @@
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/style.css?v=20260619" rel="stylesheet">
 <style>
-  /* ── Testimonials page styles ── */
-  .testimonials-intro {
-    background: #f8f9fb;
-    padding: 60px 0 40px;
-    text-align: center;
-  }
-  .testimonials-intro h2 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(2rem, 4vw, 3rem);
-    color: #1a1a2e;
-    margin-bottom: 1rem;
-  }
-  .testimonials-intro p {
-    color: #555;
-    font-size: 1.1rem;
-    max-width: 600px;
-    margin: 0 auto;
-  }
+.testimonials-intro {
+  background: #f8f9fb;
+  padding: 56px 0 40px;
+  text-align: center;
+}
+.testimonials-intro .eyebrow {
+  color: #00afb9;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.testimonials-intro h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: #1a1a2e;
+  margin-bottom: 14px;
+}
+.testimonials-intro p {
+  color: #666;
+  font-size: 1.05rem;
+  max-width: 560px;
+  margin: 0 auto;
+}
 
-  /* ── Grid ── */
-  .testimonials-grid {
-    padding: 50px 0 70px;
-    background: #fff;
-  }
-  .testimonial-card {
-    background: #fff;
-    border: 1px solid #ede9f0;
-    border-radius: 14px;
-    padding: 28px 26px 24px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    transition: box-shadow 0.25s ease, transform 0.25s ease;
-    position: relative;
-  }
-  .testimonial-card:hover {
-    box-shadow: 0 8px 30px rgba(150, 125, 169, 0.15);
-    transform: translateY(-3px);
-  }
-  .testimonial-card .quote-mark {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 4rem;
-    line-height: 1;
-    color: #00afb9;
-    opacity: 0.25;
-    position: absolute;
-    top: 14px;
-    left: 20px;
-  }
-  .testimonial-card .stars {
-    color: #b8a06f;
-    font-size: 0.9rem;
-    letter-spacing: 2px;
-    margin-bottom: 14px;
-    margin-top: 10px;
-  }
-  .testimonial-card .body {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.08rem;
-    line-height: 1.75;
-    color: #2a2a3a;
-    flex: 1;
-    font-style: italic;
-  }
-  .testimonial-card .attribution {
-    margin-top: 18px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  .testimonial-card .attribution .avatar {
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #00afb9, #967da9);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    font-weight: 700;
-    font-size: 0.9rem;
-    flex-shrink: 0;
-  }
-  .testimonial-card .attribution .name {
-    font-weight: 600;
-    font-size: 0.9rem;
-    color: #1a1a2e;
-    line-height: 1.2;
-  }
-  .testimonial-card .attribution .tag {
-    font-size: 0.75rem;
-    color: #967da9;
-    font-weight: 500;
-  }
+/* Masonry grid */
+.testimonials-wall {
+  padding: 50px 0 70px;
+  background: #fff;
+}
+.masonry-grid {
+  columns: 3;
+  column-gap: 24px;
+}
+@media (max-width: 991px) { .masonry-grid { columns: 2; } }
+@media (max-width: 575px) { .masonry-grid { columns: 1; } }
 
-  /* ── Featured (large) card ── */
-  .testimonial-card.featured {
-    background: linear-gradient(135deg, #1a1a2e 0%, #2a1f3d 100%);
-    border: none;
-    color: #fff;
-  }
-  .testimonial-card.featured .body {
-    color: rgba(255,255,255,0.9);
-  }
-  .testimonial-card.featured .attribution .name {
-    color: #fff;
-  }
-  .testimonial-card.featured .quote-mark {
-    color: #00afb9;
-    opacity: 0.4;
-  }
+.t-card {
+  break-inside: avoid;
+  background: #fff;
+  border: 1px solid #ede9f0;
+  border-radius: 14px;
+  padding: 28px 26px 22px;
+  margin-bottom: 24px;
+  position: relative;
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+.t-card:hover {
+  box-shadow: 0 8px 30px rgba(150,125,169,0.15);
+  transform: translateY(-3px);
+}
+.t-card .qmark {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 5rem;
+  line-height: 1;
+  color: #00afb9;
+  opacity: 0.18;
+  position: absolute;
+  top: 8px;
+  left: 18px;
+  pointer-events: none;
+}
+.t-card .stars {
+  color: #b8a06f;
+  font-size: 0.85rem;
+  letter-spacing: 3px;
+  margin-bottom: 14px;
+  margin-top: 8px;
+}
+.t-card .body {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.08rem;
+  line-height: 1.8;
+  color: #2a2a3a;
+  font-style: italic;
+}
+.t-card .body p {
+  margin-bottom: 0.75rem;
+}
+.t-card .body p:last-child { margin-bottom: 0; }
+.t-card .attr {
+  margin-top: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.t-card .attr .av {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #00afb9, #967da9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+.t-card .attr .name {
+  font-weight: 600;
+  font-size: 0.88rem;
+  color: #1a1a2e;
+}
+.t-card .attr .role {
+  font-size: 0.73rem;
+  color: #967da9;
+  font-weight: 500;
+}
 
-  /* ── CTA strip ── */
-  .testimonials-cta {
-    background: linear-gradient(135deg, #00afb9 0%, #967da9 100%);
-    padding: 60px 0;
-    text-align: center;
-    color: #fff;
-  }
-  .testimonials-cta h3 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(1.8rem, 3vw, 2.6rem);
-    margin-bottom: 0.75rem;
-  }
-  .testimonials-cta p {
-    font-size: 1.05rem;
-    opacity: 0.9;
-    margin-bottom: 1.5rem;
-  }
-  .testimonials-cta .btn-light {
-    background: #fff;
-    color: #1a1a2e;
-    font-weight: 600;
-    border-radius: 50px;
-    padding: 12px 32px;
-    border: none;
-    transition: background 0.2s, color 0.2s;
-  }
-  .testimonials-cta .btn-light:hover {
-    background: #1a1a2e;
-    color: #fff;
-  }
+/* Featured card */
+.t-card.featured {
+  background: linear-gradient(135deg, #1a1a2e 0%, #2a1f3d 100%);
+  border: none;
+  column-span: all;
+}
+.t-card.featured .body { color: rgba(255,255,255,0.88); }
+.t-card.featured .attr .name { color: #fff; }
+.t-card.featured .qmark { color: #00afb9; opacity: 0.3; }
+
+/* CTA */
+.testimonials-cta {
+  background: linear-gradient(135deg, #00afb9 0%, #967da9 100%);
+  padding: 60px 0;
+  text-align: center;
+  color: #fff;
+}
+.testimonials-cta h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  margin-bottom: 0.75rem;
+}
+.testimonials-cta p {
+  font-size: 1.05rem;
+  opacity: 0.9;
+  margin-bottom: 1.5rem;
+}
+.testimonials-cta .btn-cta {
+  background: #fff;
+  color: #1a1a2e;
+  font-weight: 600;
+  border-radius: 50px;
+  padding: 12px 36px;
+  border: none;
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.2s, color 0.2s;
+}
+.testimonials-cta .btn-cta:hover {
+  background: #1a1a2e;
+  color: #fff;
+}
 </style>
 </head>
 <body>
 
-<!-- Spinner Start -->
+<!-- Spinner -->
 <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-  <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-    <span class="sr-only">Loading...</span>
-  </div>
+  <div class="spinner-border text-primary" style="width:3rem;height:3rem;" role="status"><span class="sr-only">Loading...</span></div>
 </div>
-<!-- Spinner End -->
 
-<!-- Navbar Start -->
+<!-- Navbar -->
 <div class="container-fluid position-relative p-0">
   <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0 bg-white shadow-sm">
     <a href="index.html" class="navbar-brand p-0">
@@ -203,13 +211,12 @@
       </div>
       <div class="d-flex flex-column flex-lg-row align-items-stretch align-items-lg-center gap-2 ms-lg-3 mt-3 mt-lg-0">
         <a class="btn btn-primary rounded-pill py-2 px-4" href="https://wa.me/201287874292" target="_blank" rel="noopener">
-          <i class="fab fa-whatsapp me-2" style="color:#25D366; background:#fff; border-radius:50%; padding:0.3em; font-size:0.85em;"></i>Message Me
+          <i class="fab fa-whatsapp me-2" style="color:#25D366;background:#fff;border-radius:50%;padding:0.3em;font-size:0.85em;"></i>Message Me
         </a>
       </div>
     </div>
   </nav>
 </div>
-<!-- Navbar End -->
 
 <!-- Page Header -->
 <div class="container-fluid bg-breadcrumb-mfc mb-0">
@@ -227,308 +234,313 @@
 <!-- Intro -->
 <div class="testimonials-intro wow fadeInUp" data-wow-delay="0.1s">
   <div class="container">
-    <p class="text-uppercase fw-600 mb-2" style="color:#00afb9; letter-spacing:2px; font-size:0.85rem;">Real Words. Real People.</p>
+    <p class="eyebrow">Real Words. Real People.</p>
     <h2>Here's what people are saying</h2>
     <p>From readers who found hope in the pages of the book, to people who've experienced working with Lindsey directly — these are their words.</p>
   </div>
 </div>
 
-<!-- Testimonials Grid -->
-<div class="testimonials-grid">
+<!-- Wall -->
+<div class="testimonials-wall">
   <div class="container">
-    <div class="row g-4">
+    <div class="masonry-grid">
 
-      <!-- 1: Lauren - FEATURED (strongest, most target-audience specific) -->
-      <div class="col-12 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="testimonial-card featured">
-          <div class="quote-mark">"</div>
-          <div class="stars">★ ★ ★ ★ ★</div>
-          <p class="body">It didn't feel like another book telling people to 'just manage it' or push through. It felt like someone who has actually lived it was sitting next to me saying, I get it, and there's another way. Anyone with fibromyalgia, chronic illness, or anyone who's ever been told they'll just have to live with their condition should read this — it offers something that's often missing: hope, practical direction, and permission to believe life could be bigger than their diagnosis.</p>
-          <div class="attribution">
-            <div class="avatar">L</div>
-            <div>
-              <div class="name">Lauren</div>
-              <div class="tag">Book reader</div>
-            </div>
+      <!-- FEATURED: Lauren -->
+      <div class="t-card featured wow fadeInUp" data-wow-delay="0.1s">
+        <div class="qmark">"</div>
+        <div class="stars">★ ★ ★ ★ ★</div>
+        <div class="body">
+          <p>My first impression was honestly relief. It didn't feel like another book telling people to 'just manage it' or push through. It felt like someone who has actually lived it was sitting next to me saying, 'I get it, and there's another way.'</p>
+          <p>The part that stuck with me most was the phone call with the fibromyalgia support group and the realization that you didn't want to belong to an identity built around suffering. That really hit me because so many people end up accepting survival as the end goal.</p>
+          <p>I think anyone with fibromyalgia, chronic illness, or anyone who's ever been told they'll just have to live with their condition should read this. Even if they don't agree with everything, it offers something that's often missing: hope, practical direction, and permission to believe life could be bigger than their diagnosis.</p>
+        </div>
+        <div class="attr">
+          <div class="av">L</div>
+          <div><div class="name">Lauren</div></div>
+        </div>
+      </div>
+
+      <!-- Sharli -->
+      <div class="t-card wow fadeInUp" data-wow-delay="0.1s">
+        <div class="qmark">"</div>
+        <div class="stars">★ ★ ★ ★ ★</div>
+        <div class="body">
+          <p>In From Fibromyalgia to Freedom: How I Cured My Chronic Condition, L.C. Hawkins opens up in a very candid way about the journey she embarked on to heal from an 'incurable' disease.</p>
+          <p>From the massive effort she exerted on a daily basis to accomplish simple tasks, to the mental blocks that tried to throw her off the road to recovery even when she thought she had found her way through the fog, Hawkins offers a glimpse of light, and the possibility that there is hope to end the suffering once and for all.</p>
+          <p>Her guide to healing offers a digestible roadmap that others may follow at their own pace. She is honest and realistic, without being pushy, and doesn't make pie in the sky promises. Hawkins reveals that the mindset shift doesn't happen instantly or overnight. But rather that it is a journey, and the road can be messy and frustrating, but that it's important to keep trying, again and again.</p>
+          <p>Highly recommended reading not only for those suffering from chronic pain, but to anyone feeling stuck and overwhelmed by the challenges of life. Hawkins' inspirational message of determination, patience, self love, and faith in a better future for yourself is well timed!</p>
+        </div>
+        <div class="attr">
+          <div class="av">S</div>
+          <div><div class="name">Sharli</div></div>
+        </div>
+      </div>
+
+      <!-- Darren Newman -->
+      <div class="t-card wow fadeInUp" data-wow-delay="0.15s">
+        <div class="qmark">"</div>
+        <div class="stars">★ ★ ★ ★ ★</div>
+        <div class="body">
+          <p>I have known Lindsey for a number of years and can say with complete confidence that she is one of the most dependable, detail-oriented and emotionally intelligent people I have ever met.</p>
+          <p>She is patient, compassionate and deeply committed to the wellbeing of the people she supports. She understands that everyone has individual needs and takes the time to truly meet people where they are — never rushing, never cutting corners.</p>
+          <p>I would trust Lindsey without hesitation and would recommend her to anyone seeking clarity, confidence or guidance. She is conscientious, trustworthy and treats the people she works with as if they truly matter — because to her, they do.</p>
+        </div>
+        <div class="attr">
+          <div class="av">D</div>
+          <div><div class="name">Darren Newman</div></div>
+        </div>
+      </div>
+
+      <!-- Toby -->
+      <div class="t-card wow fadeInUp" data-wow-delay="0.1s">
+        <div class="qmark">"</div>
+        <div class="stars">★ ★ ★ ★ ★</div>
+        <div class="body">
+          <p>Wow. An inspirational read. Honest, raw and genuine feelings. I loved the sentence that this book is a 'living breathing companion for your healing journey.' We are so reliant on doctors and medication. It was a huge relief to think of a different approach. I finally feel hope after many years of searching for answers.</p>
+        </div>
+        <div class="attr">
+          <div class="av">T</div>
+          <div><div class="name">Toby</div></div>
+        </div>
+      </div>
+
+      <!-- Michele (coaching) -->
+      <div class="t-card wow fadeInUp" data-wow-delay="0.15s">
+        <div class="qmark">"</div>
+        <div class="stars">★ ★ ★ ★ ★</div>
+        <div class="body">
+          <p>Lindsey is simply exceptional. She brings a level of care, organisation and attentiveness that I haven't experienced elsewhere — and she does it all with such warmth and ease that you barely notice how much she's actually doing.</p>
+          <p>There was a moment during our time together when I was going through a particularly difficult patch, and Lindsey's thoughtfulness made such a difference. She anticipated what was needed before I even asked — that kind of intuition is something you can't teach.</p>
+          <p>Anyone working with Lindsey will not be disappointed. She is the kind of person who makes everything feel more manageable, and leaves you feeling genuinely supported and better equipped to move forward.</p>
+        </div>
+        <div class="attr">
+          <div class="av">M</div>
+          <div><div class="name">Michele</div></div>
+        </div>
+      </div>
+
+      <!-- Nienke -->
+      <div class="t-card wow fadeInUp" data-wow-delay="0.2s">
+        <div class="qmark">"</div>
+        <div class="stars">★ ★ ★ ★ ★</div>
+        <div class="body">
+          <p>This book blends the personal experience of the author with practical insights and suggestions in a way I would say goes beyond healing 'just' fibromyalgia, by looking at health from a holistic perspective that can benefit any human.</p>
+          <p>Where mainstream health care often stops at just suppressing symptoms, this honest self reflection leads to the understanding that true healing requires understanding of the cause, which — most often — isn't even physical.</p>
+          <p>May your book help many heal, from fibromyalgia or otherwise!</p>
+        </div>
+        <div class="attr">
+          <div class="av">N</div>
+          <div><div class="name">Nienke</div></div>
+        </div>
+      </div>
+
+      <!-- Clive & Lindi -->
+      <div class="t-card wow fadeInUp" data-wow-delay="0.1s">
+        <div class="qmark">"</div>
+        <div class="stars">★ ★ ★ ★ ★</div>
+        <div class="body">
+          <p>From the moment we started working with Lindsey, we felt completely at ease. She has a natural ability to make you feel seen and supported, bringing genuine warmth and attentiveness to everything she does.</p>
+          <p>What stood out most was how consistently she showed up — always checking in, always one step ahead, and always making sure nothing slipped through the cracks. That kind of reliability is rare and truly invaluable when you're navigating something that feels overwhelming.</p>
+          <p>Lindsey goes above and beyond in a way that feels completely effortless on her part. We felt genuinely cared for throughout, and would recommend her without a moment's hesitation to anyone looking for real, heartfelt support.</p>
+        </div>
+        <div class="attr">
+          <div class="av">C</div>
+          <div><div class="name">Clive &amp; Lindi</div></div>
+        </div>
+      </div>
+
+      <!-- Saura -->
+      <div class="t-card wow fadeInUp" data-wow-delay="0.15s">
+        <div class="qmark">"</div>
+        <div class="stars">★ ★ ★ ★ ★</div>
+        <div class="body">
+          <p>What an inspirational and love-infused book. Hawkins draws deeply on the human desire not to be pigeon-holed and seen only as a diagnosis.</p>
+          <p>A book that beautifully encapsulates, through a personal story, the power to tap into our own inner wisdom to bring about healing. A truly uplifting book for any of us in need of restoration and healing.</p>
+        </div>
+        <div class="attr">
+          <div class="av">S</div>
+          <div><div class="name">Saura</div></div>
+        </div>
+      </div>
+
+      <!-- Helen coaching -->
+      <div class="t-card wow fadeInUp" data-wow-delay="0.2s">
+        <div class="qmark">"</div>
+        <div class="stars">★ ★ ★ ★ ★</div>
+        <div class="body">
+          <p>Lindsey is fantastic — absolutely everything I could hope for in a coach and support person. From the very beginning I felt completely at ease, confident that I was in safe, capable hands.</p>
+          <p>She went above and beyond at every turn — organised, self-sufficient, intuitive and genuinely caring. She has a rare ability to anticipate what's needed and act on it without being prompted, which meant I could fully trust the process and focus on myself.</p>
+          <p>I have already signed up to work with her again and cannot recommend her highly enough. The only problem is that once people discover how good she is, she'll be fully booked — and rightly so!</p>
+        </div>
+        <div class="attr">
+          <div class="av">H</div>
+          <div><div class="name">Helen</div></div>
+        </div>
+      </div>
+
+      <!-- Amanda -->
+      <div class="t-card wow fadeInUp" data-wow-delay="0.1s">
+        <div class="qmark">"</div>
+        <div class="stars">★ ★ ★ ★ ★</div>
+        <div class="body">
+          <p>Reading your book made me aware of how much we still need to build awareness of one another, and the excitement to read how you managed to cure yourself to the woman you are today. The sheer numbers totally shocked me — in the millions living with it, yet so little discussed about it.</p>
+          <p>The book is a complete eye opener. At a few moments I felt it could in fact be talking about other conditions and illnesses that end up separating us from the rest of society — depression, agoraphobia, dementia, or even menopause: millions have it, yet brushed under the carpet.</p>
+          <p>It feels like a book everyone could benefit from reading — but especially those with fibro, those who know someone dear who has fibro, and anyone in a situation where medicine is not offering any answers yet you know there is a way out there.</p>
+          <p>The sneak peek left me wanting to read the rest.</p>
+        </div>
+        <div class="attr">
+          <div class="av">A</div>
+          <div><div class="name">Amanda</div></div>
+        </div>
+      </div>
+
+      <!-- Shali -->
+      <div class="t-card wow fadeInUp" data-wow-delay="0.15s">
+        <div class="qmark">"</div>
+        <div class="stars">★ ★ ★ ★ ★</div>
+        <div class="body">
+          <p>Lindsey is super reliable and kept me informed every step of the way — including when things got complicated. She took immediate action when needed and handled everything with such care and calm that I felt completely reassured throughout.</p>
+          <p>What really struck me was the level of genuine warmth she brings. It never felt transactional — it felt like working with someone who truly cared about the outcome, not just completing the task.</p>
+          <p>I felt so well looked after that I've stayed connected, and I can't recommend her enough. Working with Lindsey is one of those experiences that genuinely makes your life easier and better.</p>
+        </div>
+        <div class="attr">
+          <div class="av">S</div>
+          <div><div class="name">Shali</div></div>
+        </div>
+      </div>
+
+      <!-- Fiona -->
+      <div class="t-card wow fadeInUp" data-wow-delay="0.2s">
+        <div class="qmark">"</div>
+        <div class="stars">★ ★ ★ ★ ★</div>
+        <div class="body">
+          <p>This book is an utterly honest and realistic account of finding the light. Of changing your mindset and helping to find a path. Lindsey helps you to break it down into tiny pieces and one at a time builds it into a mosaic of hope and strength, with no judgement.</p>
+        </div>
+        <div class="attr">
+          <div class="av">F</div>
+          <div><div class="name">Fiona</div></div>
+        </div>
+      </div>
+
+      <!-- Penny -->
+      <div class="t-card wow fadeInUp" data-wow-delay="0.1s">
+        <div class="qmark">"</div>
+        <div class="stars">★ ★ ★ ★ ★</div>
+        <div class="body">
+          <p>Lindsey is reliable, warm and wonderfully supportive. She kept communication consistent and clear throughout, which made such a difference to how settled and confident I felt during what was otherwise a stressful time.</p>
+          <p>She has a steady, reassuring nature that brings calm to situations that might otherwise feel chaotic. Regular updates, thoughtful check-ins, and a genuine desire to make things easier — she delivered all of it without being asked.</p>
+          <p>I would highly recommend Lindsey and genuinely look forward to working with her again. She's the kind of support that you don't realise you needed until you have it.</p>
+        </div>
+        <div class="attr">
+          <div class="av">P</div>
+          <div><div class="name">Penny</div></div>
+        </div>
+      </div>
+
+      <!-- Noor Alanar -->
+      <div class="t-card wow fadeInUp" data-wow-delay="0.15s">
+        <div class="qmark">"</div>
+        <div class="stars">★ ★ ★ ★ ★</div>
+        <div class="body">
+          <p>As a dance instructor for several Universities throughout the decades, I worked with many women who were suffering with Fibromyalgia. These ladies were frustrated at the lack of medical advice and understanding of their condition.</p>
+          <p>After reading Lindsey Hawkins' From Fibromyalgia to Freedom, I honestly felt there was hope for these ladies. Hawkins provides a very workable format. Inspirational. Her approach is uplifting.</p>
+          <p>Lindsey offers pages for you to jot notes as you explore the sections. She guides your enjoyment as you explore.</p>
+        </div>
+        <div class="attr">
+          <div class="av">N</div>
+          <div>
+            <div class="name">Noor Alanar</div>
+            <div class="role">Dance &amp; Movement Instructor</div>
           </div>
         </div>
       </div>
 
-      <!-- 2: Darren Newman -->
-      <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="testimonial-card">
-          <div class="quote-mark">"</div>
-          <div class="stars">★ ★ ★ ★ ★</div>
-          <p class="body">She is one of the most dependable, detail-oriented and emotionally intelligent people I have ever met. She is patient, compassionate and deeply committed to the wellbeing of the people she supports — and she treats the people she works with as if they truly matter, because to her, they do.</p>
-          <div class="attribution">
-            <div class="avatar">D</div>
-            <div>
-              <div class="name">Darren Newman</div>
-            </div>
-          </div>
+      <!-- Gail -->
+      <div class="t-card wow fadeInUp" data-wow-delay="0.2s">
+        <div class="qmark">"</div>
+        <div class="stars">★ ★ ★ ★ ★</div>
+        <div class="body">
+          <p>I would be more than happy to recommend Lindsey to anyone. She is a huge-hearted, knowledgeable and endlessly caring person who goes out of her way to learn, grow and show up fully for the people she works with.</p>
+          <p>She is very organised and brings a calm, friendly energy that immediately puts you at ease. We became close quickly, which speaks to the kind of genuine connection she creates with the people around her.</p>
+          <p>Lindsey is polite, warm and deeply committed — the kind of person you feel lucky to have in your corner.</p>
+        </div>
+        <div class="attr">
+          <div class="av">G</div>
+          <div><div class="name">Gail</div></div>
         </div>
       </div>
 
-      <!-- 3: Sharli -->
-      <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.15s">
-        <div class="testimonial-card">
-          <div class="quote-mark">"</div>
-          <div class="stars">★ ★ ★ ★ ★</div>
-          <p class="body">Hawkins offers a glimpse of light, and the possibility that there is hope to end the suffering once and for all. She is honest and realistic, without being pushy, and doesn't make pie in the sky promises. Highly recommended not only for those suffering from chronic pain, but to anyone feeling stuck and overwhelmed by the challenges of life.</p>
-          <div class="attribution">
-            <div class="avatar">S</div>
-            <div>
-              <div class="name">Sharli</div>
-              <div class="tag">Book reader</div>
-            </div>
-          </div>
+      <!-- Helen book -->
+      <div class="t-card wow fadeInUp" data-wow-delay="0.1s">
+        <div class="qmark">"</div>
+        <div class="stars">★ ★ ★ ★ ★</div>
+        <div class="body">
+          <p>Straight away it felt extremely personal, as if I was reading a journal of someone's deepest thoughts.</p>
+          <p>What if I focused on what I want instead of what I fear? This sentence was quite profound.</p>
+          <p>A person who is craving understanding of having a chronic and debilitating condition and who wants to feel less alone and could use some guidance to help take different steps forward.</p>
+        </div>
+        <div class="attr">
+          <div class="av">H</div>
+          <div><div class="name">Helen</div></div>
         </div>
       </div>
 
-      <!-- 4: Michele -->
-      <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
-        <div class="testimonial-card">
-          <div class="quote-mark">"</div>
-          <div class="stars">★ ★ ★ ★ ★</div>
-          <p class="body">She brings a level of care, organisation and attentiveness that I haven't experienced elsewhere. She anticipated what was needed before I even asked — that kind of intuition is something you can't teach. She is the kind of person who makes everything feel more manageable and leaves you feeling genuinely supported.</p>
-          <div class="attribution">
-            <div class="avatar">M</div>
-            <div>
-              <div class="name">Michele</div>
-            </div>
-          </div>
+      <!-- Claudia -->
+      <div class="t-card wow fadeInUp" data-wow-delay="0.15s">
+        <div class="qmark">"</div>
+        <div class="stars">★ ★ ★ ★ ★</div>
+        <div class="body">
+          <p>Lindsey was easy to connect with from the very first conversation — warm, professional, and immediately trustworthy. She has a gift for making you feel comfortable quickly, which made it easy to open up and engage fully.</p>
+          <p>Throughout our time working together, she was thoughtful, self-sufficient, and completely reliable. I never had to chase or wonder — she was always there, always communicating clearly and with care.</p>
+          <p>I felt completely confident in her and would highly recommend Lindsey to anyone looking for someone who genuinely shows up for the people she works with.</p>
+        </div>
+        <div class="attr">
+          <div class="av">C</div>
+          <div><div class="name">Claudia</div></div>
         </div>
       </div>
 
-      <!-- 5: Fiona -->
-      <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="testimonial-card">
-          <div class="quote-mark">"</div>
-          <div class="stars">★ ★ ★ ★ ★</div>
-          <p class="body">An utterly honest and realistic account of finding the light. Lindsey helps you break it down into tiny pieces and builds it into a mosaic of hope and strength, with no judgement.</p>
-          <div class="attribution">
-            <div class="avatar">F</div>
-            <div>
-              <div class="name">Fiona</div>
-              <div class="tag">Book reader</div>
-            </div>
-          </div>
+      <!-- Salma -->
+      <div class="t-card wow fadeInUp" data-wow-delay="0.2s">
+        <div class="qmark">"</div>
+        <div class="stars">★ ★ ★ ★ ★</div>
+        <div class="body">
+          <p>From Fibromyalgia to Freedom is far more than a personal story — it's a warm, practical companion that meets you where you are and gives you real tools to move forward. Hawkins writes with both vulnerability and clarity, sharing not just what she went through, but how she found her way out.</p>
+          <p>What struck me most was how the book balances deeply human storytelling with actionable guidance — it doesn't just inspire you, it shows you the next step. A genuinely uplifting read that leaves you feeling both hopeful and equipped.</p>
+        </div>
+        <div class="attr">
+          <div class="av">S</div>
+          <div><div class="name">Salma</div></div>
         </div>
       </div>
 
-      <!-- 6: Helen (coaching) -->
-      <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.15s">
-        <div class="testimonial-card">
-          <div class="quote-mark">"</div>
-          <div class="stars">★ ★ ★ ★ ★</div>
-          <p class="body">She went above and beyond at every turn — organised, self-sufficient, intuitive and genuinely caring. She has a rare ability to anticipate what's needed and act on it without being prompted, which meant I could fully trust the process and focus on myself. I cannot recommend her highly enough.</p>
-          <div class="attribution">
-            <div class="avatar">H</div>
-            <div>
-              <div class="name">Helen</div>
-            </div>
-          </div>
+      <!-- Hannah -->
+      <div class="t-card wow fadeInUp" data-wow-delay="0.1s">
+        <div class="qmark">"</div>
+        <div class="stars">★ ★ ★ ★ ★</div>
+        <div class="body">
+          <p>Lindsey is easy and friendly to communicate with, and has a wonderful way of keeping you on track without it ever feeling pressured. She has a natural ability to encourage organisation and clarity in a way that feels supportive rather than directive.</p>
+          <p>She was super adaptable and flexible throughout our time together, always responding thoughtfully and in a timely way — even to the most random of requests. Nothing ever felt like too much trouble.</p>
+          <p>It was a genuinely easy, positive experience from start to finish, and I feel 100% confident recommending Lindsey to anyone. She brings real care, real presence, and real results.</p>
+        </div>
+        <div class="attr">
+          <div class="av">H</div>
+          <div><div class="name">Hannah</div></div>
         </div>
       </div>
 
-      <!-- 7: Saura -->
-      <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
-        <div class="testimonial-card">
-          <div class="quote-mark">"</div>
-          <div class="stars">★ ★ ★ ★ ★</div>
-          <p class="body">What an inspirational and love-infused book. Hawkins draws deeply on the human desire not to be pigeon-holed and seen only as a diagnosis. A truly uplifting book for any of us in need of restoration and healing.</p>
-          <div class="attribution">
-            <div class="avatar">S</div>
-            <div>
-              <div class="name">Saura</div>
-              <div class="tag">Book reader</div>
-            </div>
-          </div>
+      <!-- Mel -->
+      <div class="t-card wow fadeInUp" data-wow-delay="0.15s">
+        <div class="qmark">"</div>
+        <div class="stars">★ ★ ★ ★ ★</div>
+        <div class="body">
+          <p>Lindsey brings incredible passion, kindness and attentiveness to everything she does. She has a natural ability to make people feel genuinely cared for, and approaches every situation with warmth and a real desire to help.</p>
+          <p>She goes above and beyond consistently — not because she has to, but because that's simply who she is. Her level of commitment and care is something I haven't often come across, and it makes a real difference to the people she works with.</p>
+          <p>I would highly recommend Lindsey to anyone. You can trust her completely, and working with her brings genuine peace of mind knowing you are in excellent hands.</p>
         </div>
-      </div>
-
-      <!-- 8: Shali -->
-      <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="testimonial-card">
-          <div class="quote-mark">"</div>
-          <div class="stars">★ ★ ★ ★ ★</div>
-          <p class="body">It never felt transactional — it felt like working with someone who truly cared about the outcome. Working with Lindsey is one of those experiences that genuinely makes your life easier and better.</p>
-          <div class="attribution">
-            <div class="avatar">S</div>
-            <div>
-              <div class="name">Shali</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 9: Nienke -->
-      <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.15s">
-        <div class="testimonial-card">
-          <div class="quote-mark">"</div>
-          <div class="stars">★ ★ ★ ★ ★</div>
-          <p class="body">This book goes beyond healing 'just' fibromyalgia — it offers a holistic perspective that can benefit any human. Where mainstream health care often stops at just suppressing symptoms, this honest self-reflection leads to the understanding that true healing requires understanding the cause.</p>
-          <div class="attribution">
-            <div class="avatar">N</div>
-            <div>
-              <div class="name">Nienke</div>
-              <div class="tag">Book reader</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 10: Penny -->
-      <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
-        <div class="testimonial-card">
-          <div class="quote-mark">"</div>
-          <div class="stars">★ ★ ★ ★ ★</div>
-          <p class="body">She has a steady, reassuring nature that brings calm to situations that might otherwise feel chaotic. She's the kind of support that you don't realise you needed until you have it.</p>
-          <div class="attribution">
-            <div class="avatar">P</div>
-            <div>
-              <div class="name">Penny</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 11: Helen (book) -->
-      <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="testimonial-card">
-          <div class="quote-mark">"</div>
-          <div class="stars">★ ★ ★ ★ ★</div>
-          <p class="body">It felt extremely personal, as if I was reading a journal of someone's deepest thoughts. What if I focused on what I want instead of what I fear? — this sentence was quite profound. Very impressive and I'd be interested to read the full version.</p>
-          <div class="attribution">
-            <div class="avatar">H</div>
-            <div>
-              <div class="name">Helen</div>
-              <div class="tag">Book reader</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 12: Claudia -->
-      <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.15s">
-        <div class="testimonial-card">
-          <div class="quote-mark">"</div>
-          <div class="stars">★ ★ ★ ★ ★</div>
-          <p class="body">She has a gift for making you feel comfortable quickly, which made it easy to open up and engage fully. I never had to chase or wonder — she was always there, always communicating clearly and with care. I would highly recommend Lindsey to anyone.</p>
-          <div class="attribution">
-            <div class="avatar">C</div>
-            <div>
-              <div class="name">Claudia</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 13: Amanda -->
-      <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
-        <div class="testimonial-card">
-          <div class="quote-mark">"</div>
-          <div class="stars">★ ★ ★ ★ ★</div>
-          <p class="body">The book is a complete eye opener. It feels like a book everyone could benefit from reading — but especially those who know there is a way out there, even when no one seems to understand. The sneak peek left me wanting to read the rest.</p>
-          <div class="attribution">
-            <div class="avatar">A</div>
-            <div>
-              <div class="name">Amanda</div>
-              <div class="tag">Book reader</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 14: Mel -->
-      <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="testimonial-card">
-          <div class="quote-mark">"</div>
-          <div class="stars">★ ★ ★ ★ ★</div>
-          <p class="body">She goes above and beyond consistently — not because she has to, but because that's simply who she is. Working with Lindsey brings genuine peace of mind knowing you are in excellent hands.</p>
-          <div class="attribution">
-            <div class="avatar">M</div>
-            <div>
-              <div class="name">Mel</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 15: Noor Alanar -->
-      <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.15s">
-        <div class="testimonial-card">
-          <div class="quote-mark">"</div>
-          <div class="stars">★ ★ ★ ★ ★</div>
-          <p class="body">As a dance instructor who worked with many women suffering with fibromyalgia, after reading this book I honestly felt there was hope for them. Hawkins provides a very workable format. Inspirational. Her approach is uplifting.</p>
-          <div class="attribution">
-            <div class="avatar">N</div>
-            <div>
-              <div class="name">Noor Alanar</div>
-              <div class="tag">Dance &amp; Movement Instructor</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 16: Gail -->
-      <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
-        <div class="testimonial-card">
-          <div class="quote-mark">"</div>
-          <div class="stars">★ ★ ★ ★ ★</div>
-          <p class="body">Lindsey is the kind of person you feel lucky to have in your corner. She goes out of her way to learn, grow and show up fully for the people she works with — warm, knowledgeable and deeply committed.</p>
-          <div class="attribution">
-            <div class="avatar">G</div>
-            <div>
-              <div class="name">Gail</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 17: Salma -->
-      <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="testimonial-card">
-          <div class="quote-mark">"</div>
-          <div class="stars">★ ★ ★ ★ ★</div>
-          <p class="body">A heartfelt and inspiring read — the storytelling is engaging and compassionate, making it easy to connect with the experiences shared. An uplifting and motivational guide that encourages readers to explore healing with an open mind.</p>
-          <div class="attribution">
-            <div class="avatar">S</div>
-            <div>
-              <div class="name">Salma</div>
-              <div class="tag">Book reader</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 18: Clive_Lindi -->
-      <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.15s">
-        <div class="testimonial-card">
-          <div class="quote-mark">"</div>
-          <div class="stars">★ ★ ★ ★ ★</div>
-          <p class="body">She has a natural ability to make you feel seen and supported, bringing genuine warmth and attentiveness to everything she does. That kind of reliability is rare and truly invaluable when you're navigating something that feels overwhelming.</p>
-          <div class="attribution">
-            <div class="avatar">C</div>
-            <div>
-              <div class="name">Clive &amp; Lindi</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 19: Hannah -->
-      <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
-        <div class="testimonial-card">
-          <div class="quote-mark">"</div>
-          <div class="stars">★ ★ ★ ★ ★</div>
-          <p class="body">Nothing ever felt like too much trouble. She brings real care, real presence, and real results — and I feel 100% confident recommending Lindsey to anyone.</p>
-          <div class="attribution">
-            <div class="avatar">H</div>
-            <div>
-              <div class="name">Hannah</div>
-            </div>
-          </div>
+        <div class="attr">
+          <div class="av">M</div>
+          <div><div class="name">Mel</div></div>
         </div>
       </div>
 
@@ -536,36 +548,34 @@
   </div>
 </div>
 
-<!-- CTA Strip -->
+<!-- CTA -->
 <div class="testimonials-cta wow fadeInUp" data-wow-delay="0.1s">
   <div class="container">
     <h3>Ready to write your own story?</h3>
     <p>Book a free clarity call and let's talk about what's possible for you.</p>
-    <a href="https://wa.me/201287874292" target="_blank" rel="noopener" class="btn btn-light rounded-pill py-3 px-5">
+    <a href="https://wa.me/201287874292" target="_blank" rel="noopener" class="btn-cta">
       <i class="fab fa-whatsapp me-2" style="color:#25D366;"></i>Message Me
     </a>
   </div>
 </div>
 
-<!-- Footer Start -->
+<!-- Footer -->
 <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
   <div class="container py-5">
     <div class="row g-5 align-items-start">
-
       <div class="col-md-6 col-lg-3">
         <div class="footer-item">
           <h4 class="text-white mb-4">My Fibro's Cured</h4>
           <p class="text-white mb-4">Helping fibromyalgia sufferers go from surviving to thriving — through mindset, holistic healing, and lived experience.</p>
           <div class="footer-social-grid">
-            <a href="https://www.facebook.com/share/1JY3W1Dmza/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f" style="color:#fff; font-size:1rem;"></i></a>
-            <a href="https://www.instagram.com/lc.desires" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram" style="color:#fff; font-size:1rem;"></i></a>
-            <a href="https://www.tiktok.com/@myfibroscured" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok" style="color:#fff; font-size:1rem;"></i></a>
-            <a href="https://www.youtube.com/@myfibroscured" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube" style="color:#fff; font-size:1rem;"></i></a>
-            <a href="https://www.linkedin.com/in/lindsey-hawkins" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in" style="color:#fff; font-size:1rem;"></i></a>
+            <a href="https://www.facebook.com/share/1JY3W1Dmza/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f" style="color:#fff;font-size:1rem;"></i></a>
+            <a href="https://www.instagram.com/lc.desires" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram" style="color:#fff;font-size:1rem;"></i></a>
+            <a href="https://www.tiktok.com/@myfibroscured" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok" style="color:#fff;font-size:1rem;"></i></a>
+            <a href="https://www.youtube.com/@myfibroscured" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube" style="color:#fff;font-size:1rem;"></i></a>
+            <a href="https://www.linkedin.com/in/lindsey-hawkins" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in" style="color:#fff;font-size:1rem;"></i></a>
           </div>
         </div>
       </div>
-
       <div class="col-md-6 col-lg-3">
         <div class="footer-item">
           <h4 class="text-white mb-4">Explore</h4>
@@ -581,12 +591,11 @@
           </div>
         </div>
       </div>
-
       <div class="col-md-6 col-lg-3">
         <div class="footer-item">
           <h4 class="text-white mb-4">Work With Lindsey</h4>
           <div class="footer-links">
-            <a class="footer-link" href="https://wa.me/201287874292" target="_blank" rel="noopener"><i class="fab fa-whatsapp me-2" style="color:#25D366; background:#fff; border-radius:50%; padding:0.3em; font-size:0.85em;"></i>Message Me</a>
+            <a class="footer-link" href="https://wa.me/201287874292" target="_blank" rel="noopener"><i class="fab fa-whatsapp me-2" style="color:#25D366;background:#fff;border-radius:50%;padding:0.3em;font-size:0.85em;"></i>Message Me</a>
             <a class="footer-link" href="https://dreamyourdesires.com/order-3275" target="_blank" rel="noopener">The 12-Week Experience</a>
             <a class="footer-link" href="https://dreamyourdesires.com/order-4301" target="_blank" rel="noopener">Pre-Order the Book</a>
             <a class="footer-link" href="https://dreamyourdesires.com/guick-start-guide" target="_blank" rel="noopener">Free Quick Start Guide</a>
@@ -594,7 +603,6 @@
           </div>
         </div>
       </div>
-
       <div class="col-md-6 col-lg-3">
         <div class="footer-item">
           <h4 class="text-white mb-4">Legal &amp; Support</h4>
@@ -605,14 +613,13 @@
             <a class="footer-link" href="disclaimer.html">Medical Disclaimer</a>
             <a class="footer-link" href="contact.html">Contact Us</a>
           </div>
-          <div class="mt-4 p-3" style="background:rgba(255,255,255,.06); border-radius:10px;">
-            <p style="color:rgba(255,255,255,.5); font-size:.78rem; margin:0; line-height:1.6;">
+          <div class="mt-4 p-3" style="background:rgba(255,255,255,.06);border-radius:10px;">
+            <p style="color:rgba(255,255,255,.5);font-size:.78rem;margin:0;line-height:1.6;">
               <strong style="color:rgba(255,255,255,.7);">Medical Disclaimer:</strong> This site is for educational &amp; inspirational purposes only and does not constitute medical advice. Always consult a qualified healthcare professional.
             </p>
           </div>
         </div>
       </div>
-
     </div>
   </div>
 </div>
@@ -621,9 +628,7 @@
   <div class="container">
     <div class="row g-4 align-items-center">
       <div class="col-md-6 text-center text-md-start mb-md-0">
-        <span class="text-body">
-          <a href="index.html" class="border-bottom text-white"><i class="fas fa-copyright text-light me-2"></i>My Fibro's Cured</a>, All rights reserved.
-        </span>
+        <span class="text-body"><a href="index.html" class="border-bottom text-white"><i class="fas fa-copyright text-light me-2"></i>My Fibro's Cured</a>, All rights reserved.</span>
       </div>
       <div class="col-md-6 text-center text-md-end text-body">
         Published by <span class="border-bottom text-white">Dream Your Desires Publishing</span>
@@ -631,7 +636,6 @@
     </div>
   </div>
 </div>
-<!-- Footer End -->
 
 <a href="#" class="btn btn-secondary btn-lg-square rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>
 
@@ -643,6 +647,5 @@
 <script src="lib/owlcarousel/owl.carousel.min.js"></script>
 <script src="js/main.js"></script>
 <script src="newsletter-popup.js" defer></script>
-
 </body>
 </html>
