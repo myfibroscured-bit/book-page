@@ -612,5 +612,28 @@ src="https://www.facebook.com/tr?id=1897280790909028&ev=PageView&noscript=1"
 <script src="js/main.js"></script>
 <script src="newsletter-popup.js" defer></script>
 
+<!-- Work-with-me page interactivity -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  // ── Client testimonial carousel ───────────────────────────
+  var $coachTesti = $('#coachTestimonialCarousel');
+  if ($coachTesti.length) {
+    $coachTesti.owlCarousel({
+      loop: true,
+      margin: 24,
+      nav: true,
+      dots: true,
+      autoplay: true,
+      autoplayTimeout: 7000,
+      autoplayHoverPause: true,
+      responsive: {
+        0:   { items: 1 },
+        768: { items: 2, slideBy: 2 }
+      }
+    });
+  }
+});
+</script>
+
 </body>
 </html>
