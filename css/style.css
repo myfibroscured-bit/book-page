@@ -657,6 +657,18 @@ a:hover { color: #008a92; }
 .mfc-testi-carousel .owl-dot.active span {
   background: var(--mfc-teal) !important;
 }
+/* Equal-height cards within testimonial carousels — keeps paired cards balanced even when quote length differs */
+.mfc-testi-carousel .owl-stage {
+  display: flex;
+  align-items: stretch;
+}
+.mfc-testi-carousel .owl-item {
+  height: auto;
+  display: flex;
+}
+.mfc-testi-carousel .owl-item > div {
+  width: 100%;
+}
 /* Page counter text */
 #peekPageCounter {
   color: rgba(74,74,90,0.7) !important;
