@@ -618,6 +618,45 @@ a:hover { color: #008a92; }
 #sneakPeekCarousel .owl-nav div.disabled {
   opacity: 0.4 !important;
 }
+/* Shared nav-arrow style for testimonial carousels (book, work-with-me, home) */
+.mfc-testi-carousel .owl-nav {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+.mfc-testi-carousel .owl-nav div {
+  background: var(--mfc-teal) !important;
+  color: #ffffff !important;
+  width: 44px !important;
+  height: 44px !important;
+  border-radius: 50% !important;
+  font-size: 1.3rem !important;
+  line-height: 44px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,.2) !important;
+  margin: 0 8px !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  cursor: pointer !important;
+}
+.mfc-testi-carousel .owl-nav div:hover {
+  background: var(--mfc-gold) !important;
+  color: #ffffff !important;
+}
+.mfc-testi-carousel .owl-dots {
+  text-align: center;
+  margin-top: 1rem;
+}
+.mfc-testi-carousel .owl-dot span {
+  background: rgba(74,74,90,.25) !important;
+  width: 10px !important;
+  height: 10px !important;
+  margin: 0 4px !important;
+}
+.mfc-testi-carousel .owl-dot.active span {
+  background: var(--mfc-teal) !important;
+}
 /* Page counter text */
 #peekPageCounter {
   color: rgba(74,74,90,0.7) !important;
