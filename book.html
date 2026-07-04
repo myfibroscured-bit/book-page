@@ -717,6 +717,24 @@ document.addEventListener('DOMContentLoaded', function () {
     var buyNow = document.getElementById('buy-now');
     if (buyNow) { buyNow.scrollIntoView({ behavior: 'smooth' }); }
   }
+
+  // ── Testimonial carousel (Section 6) ──────────────────────
+  var $bookTesti = $('#bookTestimonialCarousel');
+  if ($bookTesti.length) {
+    $bookTesti.owlCarousel({
+      loop: true,
+      margin: 24,
+      nav: true,
+      dots: true,
+      autoplay: true,
+      autoplayTimeout: 7000,
+      autoplayHoverPause: true,
+      responsive: {
+        0:   { items: 1 },
+        768: { items: 2, slideBy: 2 }
+      }
+    });
+  }
 });
 </script>
 
