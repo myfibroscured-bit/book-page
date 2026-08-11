@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reserve Your Founders Edition — From Fibromyalgia to Freedom</title>
+<meta name="description" content="The exact roadmap Lindsey Hawkins used to go from housebound on 60+ tablets a day to fully free — before it's available anywhere else.">
+<style>
+  :root{
+    --teal:#008A92;
+    --mauve:#967da9;
+    --gold:#b8a06f;
+    --navy:#1a1a2e;
+    --cream:#fbfaf8;
+    --line:#e7e3dc;
+    --text:#33323e;
+    --radius:14px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Georgia,serif;
+    background:var(--cream);
+    color:var(--text);
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{
+    font-family:Georgia,"Times New Roman",serif;
+    color:var(--navy);
+    line-height:1.25;
+    margin:0 0 16px;
+    font-weight:600;
+  }
+  p{margin:0 0 16px;}
+  .wrap{max-width:640px;margin:0 auto;padding:0 24px;}
+  section{padding:56px 0;}
+  .divider{height:1px;background:var(--line);max-width:640px;margin:0 auto;}
+
+  /* Hero */
+  .hero{padding:56px 0 40px;text-align:center;}
+  .hero h1{font-size:1.9rem;}
+  .hero .subhead{font-size:1.05rem;color:#5b5a68;max-width:520px;margin:0 auto 32px;}
+  .cover-wrap{margin:0 auto 32px;max-width:280px;}
+  .cover-placeholder{
+    border:2px dashed var(--mauve);
+    border-radius:var(--radius);
+    aspect-ratio:2/3;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--mauve);
+    font-size:0.85rem;
+    padding:20px;
+    text-align:center;
+    background:#f6f2f8;
+  }
+  .cover-wrap img{width:100%;border-radius:var(--radius);box-shadow:0 12px 32px rgba(26,26,46,0.15);display:block;}
+  .price-row{font-size:1.4rem;color:var(--navy);margin-bottom:20px;}
+  .price-row .was{color:#9a98a5;text-decoration:line-through;font-size:1rem;margin-right:8px;}
+
+  .btn{
+    display:inline-block;
+    background:var(--teal);
+    color:#fff;
+    text-decoration:none;
+    padding:16px 36px;
+    border-radius:999px;
+    font-size:1.05rem;
+    font-weight:600;
+    border:none;
+    cursor:pointer;
+    transition:background .2s ease, transform .2s ease;
+  }
+  .btn:hover{background:#00767d;transform:translateY(-1px);}
+  .btn-block{display:block;width:100%;text-align:center;}
+  .btn-secondary{background:transparent;color:var(--teal);border:2px solid var(--teal);padding:14px 34px;}
+  .btn-secondary:hover{background:rgba(0,138,146,0.08);}
+
+  /* Testimonials (full) */
+  .testimonial{max-width:560px;margin:0 auto;text-align:center;}
+  .testimonial .stars{color:var(--gold);letter-spacing:3px;margin-bottom:18px;font-size:1.1rem;}
+  .testimonial blockquote{
+    margin:0 0 20px;
+    font-style:italic;
+    font-size:1.08rem;
+    color:var(--navy);
+    font-family:Georgia,serif;
+  }
+  .testimonial cite{
+    display:block;
+    font-style:normal;
+    color:var(--mauve);
+    font-weight:600;
+    font-size:0.95rem;
+  }
+
+  /* What the book is */
+  .book-copy p{max-width:560px;margin-left:auto;margin-right:auto;text-align:center;color:#4a4956;}
+  .bullets{list-style:none;padding:0;margin:32px auto 0;max-width:460px;}
+  .bullets li{
+    display:flex;
+    align-items:flex-start;
+    gap:12px;
+    padding:12px 0;
+    border-bottom:1px solid var(--line);
+    font-size:1rem;
+  }
+  .bullets li:last-child{border-bottom:none;}
+  .bullets .check{
+    flex:0 0 auto;
+    width:22px;height:22px;
+    border-radius:50%;
+    background:var(--teal);
+    color:#fff;
+    display:flex;align-items:center;justify-content:center;
+    font-size:0.75rem;
+    margin-top:2px;
+  }
+
+  /* Offer block */
+  .offer{
+    background:var(--navy);
+    color:#f4f2ee;
+    border-radius:var(--radius);
+    padding:44px 28px;
+    max-width:560px;
+    margin:0 auto;
+    text-align:center;
+  }
+  .offer h2{color:#fff;}
+  .offer .price{font-size:2.4rem;color:var(--gold);margin:8px 0 24px;font-family:Georgia,serif;}
+  .offer .bullets{max-width:400px;text-align:left;}
+  .offer .bullets li{border-bottom:1px solid rgba(255,255,255,0.14);color:#e8e6ee;}
+  .offer .bullets .check{background:var(--gold);color:var(--navy);}
+  .timer{
+    display:flex;
+    justify-content:center;
+    gap:14px;
+    margin:28px 0;
+  }
+  .timer .unit{
+    background:rgba(255,255,255,0.08);
+    border-radius:10px;
+    padding:12px 14px;
+    min-width:64px;
+  }
+  .timer .num{font-size:1.6rem;font-weight:700;color:#fff;display:block;font-family:Georgia,serif;}
+  .timer .label{font-size:0.7rem;letter-spacing:0.06em;color:#c9c7d4;}
+  .timer-note{font-size:0.85rem;color:#c9c7d4;margin-top:18px;}
+  .offer .btn{margin-top:8px;}
+
+  /* Snippet wall */
+  .snippet-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:16px;
+    max-width:600px;
+    margin:0 auto;
+  }
+  @media(min-width:640px){
+    .snippet-grid{grid-template-columns:1fr 1fr;}
+  }
+  .snippet-card{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:22px;
+  }
+  .snippet-card .stars{color:var(--gold);letter-spacing:2px;font-size:0.85rem;margin-bottom:10px;}
+  .snippet-card p{font-size:0.92rem;font-style:italic;color:var(--navy);margin-bottom:10px;}
+  .snippet-card cite{font-style:normal;color:var(--mauve);font-size:0.85rem;font-weight:600;}
+
+  /* Order bump */
+  .bump{
+    max-width:560px;
+    margin:0 auto;
+    background:#f4effa;
+    border:1px solid #e2d7ee;
+    border-radius:var(--radius);
+    padding:28px;
+    text-align:center;
+  }
+  .bump label{
+    display:flex;
+    align-items:flex-start;
+    gap:12px;
+    text-align:left;
+    font-size:0.98rem;
+    cursor:pointer;
+  }
+  .bump input[type="checkbox"]{
+    width:20px;height:20px;
+    accent-color:var(--mauve);
+    margin-top:2px;
+    flex:0 0 auto;
+  }
+
+  /* Final CTA + footer */
+  .final-cta{text-align:center;}
+  footer{
+    text-align:center;
+    padding:32px 24px 48px;
+    color:#9a98a5;
+    font-size:0.82rem;
+  }
+  .section-label{
+    text-align:center;
+    color:var(--mauve);
+    font-size:0.75rem;
+    letter-spacing:0.08em;
+    margin-bottom:12px;
+  }
+  h2{text-align:center;font-size:1.55rem;}
+</style>
+</head>
+<body>
+
+<!-- 1. HERO -->
+<section class="hero">
+  <div class="wrap">
+    <h1>Reserve Your Founders Edition — From Fibromyalgia to Freedom.</h1>
+    <p class="subhead">The exact roadmap I used to go from housebound on 60+ tablets a day to fully free — before it's available anywhere else.</p>
+
+    <div class="cover-wrap">
+      <img src="book-cover.png" alt="From Fibromyalgia to Freedom: How I Cured My Chronic Condition — book cover by L.C. Hawkins">
+    </div>
+
+    <div class="price-row">$27 · one‑time payment</div>
+    <a href="#offer" class="btn">Reserve My Copy</a>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- 2. TESTIMONIAL (FULL) — LAUREN -->
+<section>
+  <div class="wrap testimonial">
+    <div class="stars">★★★★★</div>
+    <blockquote>
+      "My first impression was honestly relief. It didn't feel like another book telling people to 'just manage it' or push through. It felt like someone who has actually lived it was sitting next to me saying, 'I get it, and there's another way.'
+      <br><br>
+      The part that stuck with me most was the phone call with the fibromyalgia support group and the realization that you didn't want to belong to an identity built around suffering. That really hit me because so many people end up accepting survival as the end goal.
+      <br><br>
+      I think anyone with fibromyalgia, chronic illness, or anyone who's ever been told they'll just have to live with their condition should read this. Even if they don't agree with everything, it offers something that's often missing: hope, practical direction, and permission to believe life could be bigger than their diagnosis."
+    </blockquote>
+    <cite>— Lauren</cite>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- 3. WHAT THE BOOK IS -->
+<section class="book-copy">
+  <div class="wrap">
+    <h2>This isn't a book you read once</h2>
+    <p>This is not just a book — it's filled with real stories, practical lessons, proven techniques, and step-by-step guides you can actually implement. It's more than a book, it's a workbook. This book isn't something you just read once and forget — it's a living, breathing companion for your healing journey.</p>
+    <ul class="bullets">
+      <li><span class="check">✓</span> Break free from survival mode</li>
+      <li><span class="check">✓</span> Reclaim your energy and clarity</li>
+      <li><span class="check">✓</span> Build momentum with mindset, nutrition, and lifestyle shifts that last</li>
+      <li><span class="check">✓</span> Step into true freedom</li>
+    </ul>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- 4. TESTIMONIALS (FULL) — SHARLI, THEN AMANDA -->
+<section>
+  <div class="wrap testimonial">
+    <div class="stars">★★★★★</div>
+    <blockquote>
+      "In From Fibromyalgia to Freedom: How I Cured My Chronic Condition, L.C. Hawkins opens up in a very candid way about the journey she embarked on to heal from an 'incurable' disease.
+      <br><br>
+      From the massive effort she exerted on a daily basis to accomplish simple tasks, to the mental blocks that tried to throw her off the road to recovery even when she thought she had found her way through the fog, Hawkins offers a glimpse of light, and the possibility that there is hope to end the suffering once and for all.
+      <br><br>
+      Her guide to healing offers a digestible roadmap that others may follow at their own pace. She is honest and realistic, without being pushy, and doesn't make pie in the sky promises. Hawkins reveals that the mindset shift doesn't happen instantly or overnight. But rather that it is a journey, and the road can be messy and frustrating, but that it's important to keep trying, again and again.
+      <br><br>
+      Highly recommended reading not only for those suffering from chronic pain, but to anyone feeling stuck and overwhelmed by the challenges of life. Hawkins' inspirational message of determination, patience, self love, and faith in a better future for yourself is well timed!"
+    </blockquote>
+    <cite>— Sharli</cite>
+  </div>
+</section>
+
+<section style="padding-top:0;">
+  <div class="wrap testimonial">
+    <div class="stars">★★★★★</div>
+    <blockquote>
+      "Reading your book made me aware of how much we still need to build awareness of one another, and the excitement to read how you managed to cure yourself to the woman you are today. The sheer numbers totally shocked me — in the millions living with it, yet so little discussed about it.
+      <br><br>
+      The book is a complete eye opener. At a few moments I felt it could in fact be talking about other conditions and illnesses that end up separating us from the rest of society — depression, agoraphobia, dementia, or even menopause: millions have it, yet brushed under the carpet.
+      <br><br>
+      It feels like a book everyone could benefit from reading — but especially those with fibro, those who know someone dear who has fibro, and anyone in a situation where medicine is not offering any answers yet you know there is a way out there.
+      <br><br>
+      The sneak peek left me wanting to read the rest."
+    </blockquote>
+    <cite>— Amanda</cite>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- 5. OFFER BLOCK -->
+<section id="offer">
+  <div class="wrap">
+    <div class="offer">
+      <h2>The Founders Edition</h2>
+      <div class="price">$27</div>
+      <ul class="bullets">
+        <li><span class="check">✓</span> Free shipping worldwide if ordered before the timer ends</li>
+        <li><span class="check">✓</span> Limited to first 100 copies</li>
+        <li><span class="check">✓</span> Shipped personally, before public launch</li>
+      </ul>
+
+      <div class="timer" id="countdown">
+        <div class="unit"><span class="num" id="cd-hours">--</span><span class="label">HOURS</span></div>
+        <div class="unit"><span class="num" id="cd-mins">--</span><span class="label">MINS</span></div>
+        <div class="unit"><span class="num" id="cd-secs">--</span><span class="label">SECS</span></div>
+      </div>
+      <p class="timer-note" id="timer-note">Free worldwide shipping ends when this timer hits zero. Your $27 price and Founders Edition spot are not affected.</p>
+
+      <a href="#final-cta" class="btn">Reserve My Founders Edition Copy</a>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- 6. TESTIMONIAL (FULL) — NOOR ALANAR -->
+<section>
+  <div class="wrap testimonial">
+    <div class="stars">★★★★★</div>
+    <blockquote>
+      "As a dance instructor for several Universities throughout the decades, I worked with many women who were suffering with Fibromyalgia. These ladies were frustrated at the lack of medical advice and understanding of their condition.
+      <br><br>
+      After reading Lindsey Hawkins' From Fibromyalgia to Freedom, I honestly felt there was hope for these ladies. Hawkins provides a very workable format. Inspirational. Her approach is uplifting.
+      <br><br>
+      Lindsey offers pages for you to jot notes as you explore the sections. She guides your enjoyment as you explore."
+    </blockquote>
+    <cite>— Noor Alanar, Dance and Movement Instructor</cite>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- 6.5 SNIPPET WALL -->
+<section>
+  <div class="wrap">
+    <div class="section-label">What readers are saying</div>
+    <div class="snippet-grid">
+      <div class="snippet-card">
+        <div class="stars">★★★★★</div>
+        <p>"An utterly honest and realistic account of finding the light — building hope and strength, with no judgement."</p>
+        <cite>— Fiona</cite>
+      </div>
+      <div class="snippet-card">
+        <div class="stars">★★★★★</div>
+        <p>"It felt extremely personal, as if I was reading a journal of someone's deepest thoughts."</p>
+        <cite>— Helen</cite>
+      </div>
+      <div class="snippet-card">
+        <div class="stars">★★★★★</div>
+        <p>"What if I focused on what I want instead of what I fear? — this sentence was quite profound."</p>
+        <cite>— Helen</cite>
+      </div>
+      <div class="snippet-card">
+        <div class="stars">★★★★★</div>
+        <p>"A truly uplifting book for any of us in need of restoration and healing."</p>
+        <cite>— Saura</cite>
+      </div>
+      <div class="snippet-card">
+        <div class="stars">★★★★★</div>
+        <p>"This book goes beyond healing 'just' fibromyalgia — it offers a holistic perspective that can benefit any human."</p>
+        <cite>— Nienke</cite>
+      </div>
+      <div class="snippet-card">
+        <div class="stars">★★★★★</div>
+        <p>"A heartfelt and inspiring read — the storytelling is engaging and compassionate, making it easy to connect with the experiences shared."</p>
+        <cite>— Salma</cite>
+      </div>
+      <div class="snippet-card">
+        <div class="stars">★★★★★</div>
+        <p>"I finally feel hope after many years of searching for answers."</p>
+        <cite>— Toby</cite>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- 7. ORDER BUMP -->
+<section>
+  <div class="wrap">
+    <div class="bump">
+      <label>
+        <input type="checkbox" id="order-bump">
+        <span>Know someone else fighting this fight? Add a second copy for a friend at the same presale price.</span>
+      </label>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- 8. FINAL CTA + FOOTER -->
+<section id="final-cta" class="final-cta">
+  <div class="wrap">
+    <a href="#offer" class="btn btn-block">Reserve My Founders Edition Copy</a>
+  </div>
+</section>
+
+<footer>
+  © 2026 Lindsey Hawkins — All rights reserved.
+</footer>
+
+<script>
+(function(){
+  // Per-visitor evergreen countdown: 48 hours from first visit, stored locally.
+  var STORAGE_KEY = 'mfc_presale_deadline';
+  var DURATION_MS = 48 * 60 * 60 * 1000; // 48 hours
+
+  var deadline;
+  try {
+    var stored = localStorage.getItem(STORAGE_KEY);
+    if (stored) {
+      deadline = parseInt(stored, 10);
+    } else {
+      deadline = Date.now() + DURATION_MS;
+      localStorage.setItem(STORAGE_KEY, String(deadline));
+    }
+  } catch(e) {
+    // localStorage unavailable — fall back to a session-only timer
+    deadline = Date.now() + DURATION_MS;
+  }
+
+  var hoursEl = document.getElementById('cd-hours');
+  var minsEl = document.getElementById('cd-mins');
+  var secsEl = document.getElementById('cd-secs');
+  var noteEl = document.getElementById('timer-note');
+
+  function pad(n){ return n < 10 ? '0' + n : String(n); }
+
+  function tick(){
+    var remaining = deadline - Date.now();
+    if (remaining <= 0) {
+      hoursEl.textContent = '00';
+      minsEl.textContent = '00';
+      secsEl.textContent = '00';
+      noteEl.textContent = 'Free shipping has ended — shipping is now charged at checkout. Your $27 Founders Edition price and 100-copy limit still apply.';
+      clearInterval(interval);
+      return;
+    }
+    var totalSeconds = Math.floor(remaining / 1000);
+    var hours = Math.floor(totalSeconds / 3600);
+    var mins = Math.floor((totalSeconds % 3600) / 60);
+    var secs = totalSeconds % 60;
+    hoursEl.textContent = pad(hours);
+    minsEl.textContent = pad(mins);
+    secsEl.textContent = pad(secs);
+  }
+
+  tick();
+  var interval = setInterval(tick, 1000);
+})();
+</script>
+
+</body>
+</html>
