@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Reserve Your Founders Edition — From Fibromyalgia to Freedom</title>
 <meta name="description" content="The exact roadmap Lindsey Hawkins used to go from housebound on 60+ tablets a day to fully free — before it's available anywhere else.">
+<script async src="https://js.stripe.com/v3/buy-button.js"></script>
 <style>
   :root{
     --teal:#008A92;
@@ -242,7 +243,7 @@
     </div>
 
     <div class="price-row">$27 · one‑time payment</div>
-    <a href="https://buy.stripe.com/cNi3cvcEy89KbZQ8Hp4ZG01" class="btn">Reserve My Copy</a>
+    <a href="#checkout" class="btn">Reserve My Copy</a>
   </div>
 </section>
 
@@ -335,7 +336,13 @@
       </div>
       <p class="timer-note" id="timer-note">Free worldwide shipping ends when this timer hits zero. Your $27 price and Founders Edition spot are not affected.</p>
 
-      <a href="https://buy.stripe.com/cNi3cvcEy89KbZQ8Hp4ZG01" class="btn">Reserve My Founders Edition Copy</a>
+      <div id="checkout" style="margin-top:8px;">
+        <stripe-buy-button
+          buy-button-id="buy_btn_1U3DTVHNs0Ek37gDYGfacI7r"
+          publishable-key="pk_live_PIiNBl3hup08K0krwS6LPC4N001PH28y6m"
+        >
+        </stripe-buy-button>
+      </div>
     </div>
   </div>
 </section>
@@ -419,7 +426,11 @@
 <!-- 8. FINAL CTA + FOOTER -->
 <section id="final-cta" class="final-cta">
   <div class="wrap">
-    <a href="https://buy.stripe.com/cNi3cvcEy89KbZQ8Hp4ZG01" class="btn btn-block">Reserve My Founders Edition Copy</a>
+    <stripe-buy-button
+      buy-button-id="buy_btn_1U3DTVHNs0Ek37gDYGfacI7r"
+      publishable-key="pk_live_PIiNBl3hup08K0krwS6LPC4N001PH28y6m"
+    >
+    </stripe-buy-button>
   </div>
 </section>
 
