@@ -337,11 +337,20 @@
       <p class="timer-note" id="timer-note">Free worldwide shipping ends when this timer hits zero. Your $27 price and Founders Edition spot are not affected.</p>
 
       <div id="checkout" style="margin-top:8px;">
-        <stripe-buy-button
-          buy-button-id="buy_btn_1U3DTVHNs0Ek37gDYGfacI7r"
-          publishable-key="pk_live_PIiNBl3hup08K0krwS6LPC4N001PH28y6m"
-        >
-        </stripe-buy-button>
+        <div id="checkout-free-shipping">
+          <stripe-buy-button
+            buy-button-id="buy_btn_1U3DTVHNs0Ek37gDYGfacI7r"
+            publishable-key="pk_live_PIiNBl3hup08K0krwS6LPC4N001PH28y6m"
+          >
+          </stripe-buy-button>
+        </div>
+        <div id="checkout-paid-shipping" style="display:none;">
+          <stripe-buy-button
+            buy-button-id="buy_btn_1U3EbxHNs0Ek37gDrJ3xErXe"
+            publishable-key="pk_live_PIiNBl3hup08K0krwS6LPC4N001PH28y6m"
+          >
+          </stripe-buy-button>
+        </div>
       </div>
     </div>
   </div>
@@ -426,11 +435,20 @@
 <!-- 8. FINAL CTA + FOOTER -->
 <section id="final-cta" class="final-cta">
   <div class="wrap">
-    <stripe-buy-button
-      buy-button-id="buy_btn_1U3DTVHNs0Ek37gDYGfacI7r"
-      publishable-key="pk_live_PIiNBl3hup08K0krwS6LPC4N001PH28y6m"
-    >
-    </stripe-buy-button>
+    <div id="checkout-free-shipping-2">
+      <stripe-buy-button
+        buy-button-id="buy_btn_1U3DTVHNs0Ek37gDYGfacI7r"
+        publishable-key="pk_live_PIiNBl3hup08K0krwS6LPC4N001PH28y6m"
+      >
+      </stripe-buy-button>
+    </div>
+    <div id="checkout-paid-shipping-2" style="display:none;">
+      <stripe-buy-button
+        buy-button-id="buy_btn_1U3EbxHNs0Ek37gDrJ3xErXe"
+        publishable-key="pk_live_PIiNBl3hup08K0krwS6LPC4N001PH28y6m"
+      >
+      </stripe-buy-button>
+    </div>
   </div>
 </section>
 
@@ -463,6 +481,11 @@
   var secsEl = document.getElementById('cd-secs');
   var noteEl = document.getElementById('timer-note');
 
+  var freeShip1 = document.getElementById('checkout-free-shipping');
+  var paidShip1 = document.getElementById('checkout-paid-shipping');
+  var freeShip2 = document.getElementById('checkout-free-shipping-2');
+  var paidShip2 = document.getElementById('checkout-paid-shipping-2');
+
   function pad(n){ return n < 10 ? '0' + n : String(n); }
 
   function tick(){
@@ -471,7 +494,11 @@
       hoursEl.textContent = '00';
       minsEl.textContent = '00';
       secsEl.textContent = '00';
-      noteEl.textContent = 'Free shipping has ended — shipping is now charged at checkout. Your $27 Founders Edition price and 100-copy limit still apply.';
+      noteEl.textContent = 'Free shipping has ended — shipping is now charged at checkout. Your Founders Edition spot is still secured at $27 for the book.';
+      if (freeShip1) freeShip1.style.display = 'none';
+      if (paidShip1) paidShip1.style.display = 'block';
+      if (freeShip2) freeShip2.style.display = 'none';
+      if (paidShip2) paidShip2.style.display = 'block';
       clearInterval(interval);
       return;
     }
